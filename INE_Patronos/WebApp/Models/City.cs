@@ -19,6 +19,12 @@ namespace WebApp.Models
         public int StateProvinceId { get; set; }
         public StateProvince StateProvince { get; set; }
 
+        [ForeignKey("CountryRegion")]
+        [Required(ErrorMessage = "The field CountryRegionId is required")]
+        [Range(0, int.MaxValue, ErrorMessage = "The field CountryRegionId must be a number.")]
+        public int CountryRegionId { get; set; }
+        public CountryRegion CountryRegion { get; set; }
+
         [ScaffoldColumn(false)]
         [Required(ErrorMessage = "The field CveEnt is required")]
         [StringLength(2, ErrorMessage = "The field CveEnt must have max length of 2 characters")]
@@ -65,6 +71,8 @@ namespace WebApp.Models
         [StringLength(10, ErrorMessage = "The field VTOT must have max length of 10 characters")]
         [DataType(DataType.Text, ErrorMessage = "The field VTOT must be a string")]
         public String VTOT { get; set; }
+
+        public virtual ICollection<Address> Addresses { get; set; }
 
         
 
