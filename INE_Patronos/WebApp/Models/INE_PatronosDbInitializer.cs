@@ -18,8 +18,6 @@ namespace WebApp.Models
 
                 try
                 {
-
-
                     List<CountryRegion> defaultCountriesRegion = new List<CountryRegion>();
                     List<StateProvince> defaultStatesProvince = new List<StateProvince>();
                     List<City> defaultCities = new List<City>();
@@ -212,17 +210,14 @@ namespace WebApp.Models
                     defaultCities.Add(new City() { StateProvinceId = 14, CveEnt = "14", CveCity = "125", Description = "SAN IGNACIO CERRO RDO", CveCab = "1", NameCab = "SAN IGNACIO CERRO RDO", PTOT = "17626", PMAS = "8501", PFEM = "9125", VTOT = "4171" });
 
 
-                    context.Cities.AddRange(defaultCities);
+                    context.Citys.AddRange(defaultCities);
                     context.SaveChanges();
 
-                    context.CountriesRegion.AddRange(defaultCountriesRegion);
+                    context.CountriesRegions.AddRange(defaultCountriesRegion);
                     context.SaveChanges();
 
-
-                    context.StatesProvince.AddRange(defaultStatesProvince);
+                    context.StatesProvinces.AddRange(defaultStatesProvince);
                     context.SaveChanges();
-
-
 
                     dbTran.Commit();
                 }

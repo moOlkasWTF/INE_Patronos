@@ -17,11 +17,13 @@ namespace WebApp.Models
         [Required(ErrorMessage = "The field AddressId is required")]
         [Range(0, int.MaxValue, ErrorMessage = "The field AddressId must be a number.")]
         public int AddressId { get; set; }
+        public Address Address { get; set; }
 
         [ForeignKey("Gender")]
         [Required(ErrorMessage = "The field GenderId is required")]
         [Range(0, int.MaxValue, ErrorMessage = "The field GenderId must be a number.")]
         public int GenderId { get; set; }
+        public Gender Gender { get; set; }
 
         [ScaffoldColumn(false)]
         [Required(ErrorMessage = "The field Name is required")]

@@ -12,19 +12,19 @@ namespace WebApp.Models
         [Key]
         public int Id { get; set; }
 
-        [ForeignKey("Address")]
+        [ForeignKey("CountryRegion ")]
         [Required(ErrorMessage = "The field AddressId is required")]
         [Range(0, int.MaxValue, ErrorMessage = "The field AddressId must be a number.")]
         public int CountryRegionId { get; set; }
         public CountryRegion CountryRegion { get; set; }
 
-        [ForeignKey("Address")]
+        [ForeignKey("StateProvince")]
         [Required(ErrorMessage = "The field AddressId is required")]
         [Range(0, int.MaxValue, ErrorMessage = "The field AddressId must be a number.")]
         public int StateProvinceId { get; set; }
         public StateProvince StateProvince { get; set; }
 
-        [ForeignKey("Address")]
+        [ForeignKey("City")]
         [Required(ErrorMessage = "The field AddressId is required")]
         [Range(0, int.MaxValue, ErrorMessage = "The field AddressId must be a number.")]
         public int CityId { get; set; }

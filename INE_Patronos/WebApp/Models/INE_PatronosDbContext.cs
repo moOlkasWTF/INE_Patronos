@@ -15,9 +15,16 @@ namespace WebApp.Models
             Database.SetInitializer<INE_PatronosDbContext>(new INE_PatronosDbInitializer());
         }
 
-        public DbSet<City> Cities { get; set; }
-        public DbSet<CountryRegion> CountriesRegion { get; set; }
-        public DbSet<StateProvince> StatesProvince { get; set; }
+        public DbSet<City> Citys { get; set; }
+        public DbSet<CountryRegion> CountriesRegions { get; set; }
+        public DbSet<StateProvince> StatesProvinces { get; set; }
+        public DbSet<Address> Address { get; set; }
+        public DbSet<Candidate> Candidates { get; set; }
+        public DbSet<Citizen> Citizens { get; set; }
+        public DbSet<Gender> Genders { get; set; }
+        public DbSet<PoliticalParty> PoliticalPartys { get; set; }
+        public DbSet<Roles> Roless { get; set; }
+        public DbSet<Vote> Votes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
