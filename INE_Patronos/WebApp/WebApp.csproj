@@ -186,6 +186,33 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\Fotos\CUGJ980715MNLRNS02.jpeg" />
+    <Content Include="Images\Fotos\EOLR970901HNLSZB07.jpeg" />
+    <Content Include="Images\Fotos\GAHO980220HTSRRM05.jpeg" />
+    <Content Include="Images\Fotos\GAMV000420HNLRNCA5.jpeg" />
+    <Content Include="Images\Fotos\GOAA970327MNLNRL01.jpeg" />
+    <Content Include="Images\Fotos\GOFJ971020HNLNR04.jpeg" />
+    <Content Include="Images\Fotos\GOGA981230HNLNND08.jpeg" />
+    <Content Include="Images\Fotos\GOSE990311HNLNLD07.jpeg" />
+    <Content Include="Images\Fotos\GUPR000601HMNZNNA5.jpeg" />
+    <Content Include="Images\Fotos\GURJ990109HNLRDN03.jpeg" />
+    <Content Include="Images\Fotos\HAAL980923HSPRGS07.jpeg" />
+    <Content Include="Images\Fotos\HETA980602HNLRRR03.jpeg" />
+    <Content Include="Images\Fotos\JIRF980930MNLMCB06.jpeg" />
+    <Content Include="Images\Fotos\LORP990806HNLPVD04.jpeg" />
+    <Content Include="Images\Fotos\OEMH000725MNLRRLA5.jpeg" />
+    <Content Include="Images\Fotos\PESJ991205HNLRNR04.jpeg" />
+    <Content Include="Images\Fotos\REMF990531HCSBNB00.jpeg" />
+    <Content Include="Images\Fotos\SAIA971224HSLPRL03.jpeg" />
+    <Content Include="Images\Fotos\TOGJ990820HNLRRS08.jpeg" />
+    <Content Include="Images\Fotos\WhatsApp Image 2018-11-13 at 10.17.28 AM%281%29.jpeg" />
+    <Content Include="Images\LogosPartidosPoliticos\MovimientoCiudadano.png" />
+    <Content Include="Images\LogosPartidosPoliticos\NuevaAlianza.png" />
+    <Content Include="Images\LogosPartidosPoliticos\PartidoAccionNacional.png" />
+    <Content Include="Images\LogosPartidosPoliticos\PartidodelaRevoluciónDemocrática.png" />
+    <Content Include="Images\LogosPartidosPoliticos\PartidodelTrabajo.png" />
+    <Content Include="Images\LogosPartidosPoliticos\PartidoRevolucionarioInstitucional.png" />
+    <Content Include="Images\LogosPartidosPoliticos\PartidoVerdeEcologista.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -219,7 +246,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Images\" />
     <Folder Include="P_Repository\IRepository\" />
     <Folder Include="P_Repository\Repository\" />
   </ItemGroup>
