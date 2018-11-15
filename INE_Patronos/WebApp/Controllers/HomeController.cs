@@ -13,10 +13,11 @@ namespace WebApp.Controllers
             return View();
         }
 
-        [AllowAnonymous]
-        public ActionResult Ingresar()
+        public ActionResult Login()
         {
             return View();
         }
+
+
     }
 }
