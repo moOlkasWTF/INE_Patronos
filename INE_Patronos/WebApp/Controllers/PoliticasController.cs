@@ -6,15 +6,10 @@ using System.Web.Mvc;
 
 namespace WebApp.Controllers
 {
-    public class HomeController : Controller
+    public class PoliticasController : Controller
     {
-        public ActionResult Index()
-        {
-            return View();
-        }
-
-        [AllowAnonymous]
-        public ActionResult Ingresar()
+        // GET: Politicas
+        public ActionResult Politicas()
         {
             return View();
         }
