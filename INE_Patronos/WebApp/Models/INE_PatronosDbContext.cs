@@ -18,6 +18,11 @@ namespace WebApp.Models
         public DbSet<City> Cities { get; set; }
         public DbSet<CountryRegion> CountriesRegion { get; set; }
         public DbSet<StateProvince> StatesProvince { get; set; }
+        public DbSet<Citizen> Citizens { get; set; }
+        public DbSet<Candidate> Candidates { get; set; }
+        public DbSet<Roles> Roles { get; set; }
+        public DbSet<PoliticalParty> PoliticalParties { get; set; }
+        public DbSet<Vote> Votes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

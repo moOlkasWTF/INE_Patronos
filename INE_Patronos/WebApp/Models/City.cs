@@ -72,7 +72,8 @@ namespace WebApp.Models
         [DataType(DataType.Text, ErrorMessage = "The field VTOT must be a string")]
         public String VTOT { get; set; }
 
-        public virtual ICollection<Address> Addresses { get; set; }
+        public virtual ICollection <Citizen> Citizens { get; set; }
+        
 
         
 

@@ -67,7 +67,7 @@ namespace WebApp.Models
         public String VTOT { get; set; }
 
         public virtual ICollection<City> Cities { get; set; }
-        public virtual ICollection<Address> Addresses { get; set; }
+        public virtual ICollection<Citizen> Citizens { get; set; }
         
 
     }
