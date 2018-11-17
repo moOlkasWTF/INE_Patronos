@@ -46,18 +46,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Bin\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySql.Data.6.9.12\lib\net45\MySql.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySql.Data.Entity.6.9.12\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -160,6 +152,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InformacionController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PoliticasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -184,12 +179,45 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Imagenes\CEE Logo.png" />
+    <Content Include="Imagenes\CIC.png" />
+    <Content Include="Imagenes\CLave de Elector.png" />
+    <Content Include="Imagenes\Ine Logo.png" />
+    <Content Include="Images\Fotos\CUGJ980715MNLRNS02.jpeg" />
+    <Content Include="Images\Fotos\EOLR970901HNLSZB07.jpeg" />
+    <Content Include="Images\Fotos\GAHO980220HTSRRM05.jpeg" />
+    <Content Include="Images\Fotos\GAMV000420HNLRNCA5.jpeg" />
+    <Content Include="Images\Fotos\GOAA970327MNLNRL01.jpeg" />
+    <Content Include="Images\Fotos\GOFJ971020HNLNR04.jpeg" />
+    <Content Include="Images\Fotos\GOGA981230HNLNND08.jpeg" />
+    <Content Include="Images\Fotos\GOSE990311HNLNLD07.jpeg" />
+    <Content Include="Images\Fotos\GUPR000601HMNZNNA5.jpeg" />
+    <Content Include="Images\Fotos\GURJ990109HNLRDN03.jpeg" />
+    <Content Include="Images\Fotos\HAAL980923HSPRGS07.jpeg" />
+    <Content Include="Images\Fotos\HETA980602HNLRRR03.jpeg" />
+    <Content Include="Images\Fotos\JIRF980930MNLMCB06.jpeg" />
+    <Content Include="Images\Fotos\LORP990806HNLPVD04.jpeg" />
+    <Content Include="Images\Fotos\OEMH000725MNLRRLA5.jpeg" />
+    <Content Include="Images\Fotos\PESJ991205HNLRNR04.jpeg" />
+    <Content Include="Images\Fotos\REMF990531HCSBNB00.jpeg" />
+    <Content Include="Images\Fotos\SAIA971224HSLPRL03.jpeg" />
+    <Content Include="Images\Fotos\TOGJ990820HNLRRS08.jpeg" />
+    <Content Include="Images\Fotos\WhatsApp Image 2018-11-13 at 10.17.28 AM%281%29.jpeg" />
+    <Content Include="Images\LogosPartidosPoliticos\MovimientoCiudadano.png" />
+    <Content Include="Images\LogosPartidosPoliticos\NuevaAlianza.png" />
+    <Content Include="Images\LogosPartidosPoliticos\PartidoAccionNacional.png" />
+    <Content Include="Images\LogosPartidosPoliticos\PartidodelaRevoluciónDemocrática.png" />
+    <Content Include="Images\LogosPartidosPoliticos\PartidodelTrabajo.png" />
+    <Content Include="Images\LogosPartidosPoliticos\PartidoRevolucionarioInstitucional.png" />
+    <Content Include="Images\LogosPartidosPoliticos\PartidoVerdeEcologista.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\Chart\exporting.js" />
+    <Content Include="Scripts\Chart\highcharts.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
@@ -211,13 +239,13 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Politicas\Politicas.cshtml" />
+    <Content Include="Views\Informacion\Informacion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Images\" />
     <Folder Include="P_Repository\IRepository\" />
     <Folder Include="P_Repository\Repository\" />
   </ItemGroup>

@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+
+@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+{
+
+    <img src="~/Imagenes/Ine Logo.png"><img align="Right" src="~/Imagenes/CEE Logo.png">
+    
+   
+        <center>
+            <font size=12>
+                <strong>
+    Resultados
+</strong>
+            </font>
+            </center>
+       
+    <body>
+        <font size="6" face="arial">
+            <b>
+                Ingresa Los datos para acceder a tu cuenta de INE
+            </b>
+            <br>
+        </font>
+        <br>
+        <form class="Servicio" width="98%" margin="auto">
+            <div class="Servicios">
+
+                Ingresa  LA clave de elector
+                <input type="text" name="Clave_Elector" placeholder="Clave de elector">
+                <img src="~/Imagenes/CLave de Elector.png" /><br><br /><br>
+                Ingresa El CIC de tu Credencial de elector
+                <input type="text" name="Clave_CIC" placeholder="Clave de CIC">
+                <img src="~/Imagenes/CIC.png" /> <br><br><br />
+            </div>
+        </form>
+    </body>
+}
