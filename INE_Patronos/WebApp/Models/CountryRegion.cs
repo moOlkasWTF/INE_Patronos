@@ -93,7 +93,6 @@ namespace WebApp.Models
         public String Comment { get; set; }
 
         public virtual ICollection<StateProvince> StatesProvince { get; set; }
-        public virtual ICollection<Address> Addresses { get; set; }
         public virtual ICollection<City> Cities { get; set; } 
         
 

@@ -13,17 +13,27 @@ namespace WebApp.Models
         [Key]
         public int Id { get; set; }
 
-        [ForeignKey("Address")]
-        [Required(ErrorMessage = "The field AddressId is required")]
-        [Range(0, int.MaxValue, ErrorMessage = "The field AddressId must be a number.")]
-        public int AddressId { get; set; }
-        public Address Address { get; set; }
+        [ScaffoldColumn(false)]
+        [Required(ErrorMessage = "The field Address is required")]
+        [StringLength(100, ErrorMessage = "The field Address must have max length of 15 characters")]
+        [DataType(DataType.Text, ErrorMessage = "The field Address must be a string")]
+        public String Address { get; set; }
 
-        [ForeignKey("Gender")]
-        [Required(ErrorMessage = "The field GenderId is required")]
-        [Range(0, int.MaxValue, ErrorMessage = "The field GenderId must be a number.")]
-        public int GenderId { get; set; }
-        public Gender Gender { get; set; }
+        [ScaffoldColumn(false)]
+        [Required(ErrorMessage = "The field Gender is required")]
+        [StringLength(1, ErrorMessage = "The field Gender must have max length of 15 characters")]
+        [DataType(DataType.Text, ErrorMessage = "The field Gender must be a string")]
+        public String Gender { get; set; }
+
+        [ForeignKey("City")]
+        [Required(ErrorMessage = "The field CityId is required")]
+        [Range(0, int.MaxValue, ErrorMessage = "The field CityId must be a number.")]
+        public int CityId { get; set; }
+
+        [ForeignKey("StateProvince")]
+        [Required(ErrorMessage = "The field StateProvinceId is required")]
+        [Range(0, int.MaxValue, ErrorMessage = "The field StateProvinceId must be a number.")]
+        public int StateProvinceId { get; set; }
 
         [ScaffoldColumn(false)]
         [Required(ErrorMessage = "The field Name is required")]
@@ -32,10 +42,10 @@ namespace WebApp.Models
         public String Name { get; set; }
 
         [ScaffoldColumn(false)]
-        [Required(ErrorMessage = "The field LastName is required")]
-        [StringLength(30, ErrorMessage = "The field LastName must have max length of 30 characters")]
-        [DataType(DataType.Text, ErrorMessage = "The field LastName must be a string")]
-        public String LastName { get; set; }
+        [Required(ErrorMessage = "The field LastNameFather is required")]
+        [StringLength(30, ErrorMessage = "The field LastNameFather must have max length of 30 characters")]
+        [DataType(DataType.Text, ErrorMessage = "The field LastNameFather must be a string")]
+        public String LastNameFather { get; set; }
 
         [ScaffoldColumn(false)]
         [Required(ErrorMessage = "The field CURP is required")]
@@ -75,5 +85,18 @@ namespace WebApp.Models
         [StringLength(20, ErrorMessage = "The field ElectroKey must have max length of 20 characters")]
         [DataType(DataType.Text, ErrorMessage = "The field ElectroKey must be a string")]
         public String ElectroKey { get; set; }
+
+        [ScaffoldColumn(false)]
+        [Required(ErrorMessage = "The field LastNameMother is required")]
+        [StringLength(30, ErrorMessage = "The field LastNameMother must have max length of 15 characters")]
+        [DataType(DataType.Text, ErrorMessage = "The field LastNameMother must be a string")]
+        public String LastNameMother { get; set; }
+
+        [Required(ErrorMessage = "The field Name is required")]
+        public int Localization { get; set; }
+
+        [Required(ErrorMessage = "The field Name is required")]
+        public int Validity { get; set; }
+
     }
 }

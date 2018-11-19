@@ -18,9 +18,12 @@ namespace WebApp.Models
 
                 try
                 {
+
+
                     List<CountryRegion> defaultCountriesRegion = new List<CountryRegion>();
                     List<StateProvince> defaultStatesProvince = new List<StateProvince>();
                     List<City> defaultCities = new List<City>();
+                    List<Citizen> defaultCitizens = new List<Citizen>();
 
                     defaultStatesProvince.Add(new StateProvince()
                     { CountryRegionId = 1, CveEnt = "19", Description = "NUEVO LEON", Abrev = "NL", CveCab = "390001", NameCab = "CIUDAD MONTERREY",
@@ -209,14 +212,399 @@ namespace WebApp.Models
                     defaultCities.Add(new City() { StateProvinceId = 14, CveEnt = "14", CveCity = "124", Description = "ZAPOTLANEJO", CveCab = "1", NameCab = "ZAPOTLANEJO", PTOT = "63636", PMAS = "31114", PFEM = "32522", VTOT = "15642" });
                     defaultCities.Add(new City() { StateProvinceId = 14, CveEnt = "14", CveCity = "125", Description = "SAN IGNACIO CERRO RDO", CveCab = "1", NameCab = "SAN IGNACIO CERRO RDO", PTOT = "17626", PMAS = "8501", PFEM = "9125", VTOT = "4171" });
 
+                    DateTime fecha1 = new DateTime(1997, 10, 20);
+                    DateTime fecha2 = new DateTime(1999, 01, 09);
+                    DateTime fecha3 = new DateTime(1999, 03, 11);
+                    DateTime fecha4 = new DateTime(2000, 04, 20);
+                    DateTime fecha5 = new DateTime(1998, 06, 02);
+                    DateTime fecha6 = new DateTime(1999, 08, 06);
+                    DateTime fecha7 = new DateTime(1999, 12, 05);
+                    DateTime fecha8 = new DateTime(2000, 06, 01);
+                    DateTime fecha9 = new DateTime(1997, 12, 24);
+                    DateTime fecha10 = new DateTime(1997, 09, 01);
+                    DateTime fecha11 = new DateTime(1999, 05, 31);
+                    DateTime fecha12 = new DateTime(2000, 07, 25);
+                    DateTime fecha13 = new DateTime(1998, 09, 30);
+                    DateTime fecha14 = new DateTime(1998, 07, 15);
+                    DateTime fecha15 = new DateTime(1998, 12, 30);
+                    DateTime fecha16 = new DateTime(1998, 02, 20);
+                    DateTime fecha17 = new DateTime(1997, 03, 20);
+                    DateTime fecha18 = new DateTime(1998, 09, 23);
+                    DateTime fecha19 = new DateTime(1999, 08, 27);
 
-                    context.Citys.AddRange(defaultCities);
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "JONATHAN",
+                        LastNameFather = "GONZALEZ",
+                        LastNameMother = "FERNANDEZ",
+                        Address = "GRAL PABLO DE LA GARZA 247 COL JARDINES DE ESCOBEDO 1ER. SEC 66050 GRAL. ESCOBEDO, N.L.",
+                        ElectroKey = "GNFRJN97102019H800",
+                        CURP = "GOFJ971020HNLNR04",
+                        BirthDate = fecha1,
+                        YearRegistration = "2015",
+                        StateProvinceId = 19,
+                        CityId = 21,
+                        Section = ".0451",
+                        Localization = 1,
+                        Issue = "2015",
+                        Validity = 2025,
+                        Gender = "H",
+                        CIC = "IDMEX1369817135"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "JUAN GERARDO GUERRA RODRIGUEZ",
+                        LastNameFather = "GUERRA",
+                        LastNameMother = "RODRIGUEZ",
+                        Address = "AV. GALAXIA 144 COL. METROPLEX 1ER. SEC 66612 APODACA, N.L.",
+                        ElectroKey = "GRRDJN9901919H700",
+                        CURP = "GURJ990109HNLRDN03",
+                        BirthDate = fecha2,
+                        YearRegistration = "2017",
+                        StateProvinceId = 19,
+                        CityId = 6,
+                        Section = ".0069",
+                        Localization = 1,
+                        Issue = "2017",
+                        Validity = 2027,
+                        Gender = "H",
+                        CIC = "IDMEX1558771189"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "EDGAR ALFREDO",
+                        LastNameFather = "GONZALEZ",
+                        LastNameMother = "SALAZAR",
+                        Address = "C DIEGO DE MONTEMAYOR 600 B AMPL LAZARO CARDENAS 66058 GRAL ESCOBEDO, N.L.",
+                        ElectroKey = "GNSLED99031119H000",
+                        CURP = "GOSE990311HNLNLD07",
+                        BirthDate = fecha3,
+                        YearRegistration = "2017",
+                        StateProvinceId = 19,
+                        CityId = 21,
+                        Section = ".0454",
+                        Localization = 1,
+                        Issue = "2017",
+                        Validity = 2027,
+                        Gender = "H",
+                        CIC = "IDMEX1605645443"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "VICENTE",
+                        LastNameFather = "GARCIA",
+                        LastNameMother = "MENDOZA",
+                        Address = "C NOCHE BUENA 334 FRACC NUEVO LAS PUENTES 3ER SECTOR 66612 APODACA, N.L.",
+                        ElectroKey = "GRMNVC00042019H900",
+                        CURP = "GAMV000420HNLRNCA5",
+                        BirthDate = fecha4,
+                        YearRegistration = "2018",
+                        StateProvinceId = 19,
+                        CityId = 6,
+                        Section = "2429",
+                        Localization = 1,
+                        Issue = "2018",
+                        Validity = 2028,
+                        Gender = "H",
+                        CIC = "IDMEX1780284813"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "ARTURO ASAEL",
+                        LastNameFather = "HERNANDEZ",
+                        LastNameMother = "TORRES",
+                        Address = "AV LOS AMARANTOS 411 FRACC LOS AMARANTOS 66613 APODACA, N.L.",
+                        ElectroKey = "HRTRAR98060219H000",
+                        CURP = "HETA980602HNLRRR03",
+                        BirthDate = fecha5,
+                        YearRegistration = "2016",
+                        StateProvinceId = 19,
+                        CityId = 6,
+                        Section = "2501",
+                        Localization = 1,
+                        Issue = "2016",
+                        Validity = 2026,
+                        Gender = "H",
+                        CIC = "IDMEX1510744914"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "PEDRO ARMANDO",
+                        LastNameFather = "LOPEZ",
+                        LastNameMother = "RIVERA",
+                        Address = "C VIVERO DEL ROCIO 105 FRACC PORTAL DE LAS SALINAS 65550 CIENEGA DE FLORES, N.L.",
+                        ElectroKey = "LPRVPD99080619H400",
+                        CURP = "LORP990806HNLPVD04",
+                        BirthDate = fecha6,
+                        YearRegistration = "2017",
+                        StateProvinceId = 19,
+                        CityId = 12,
+                        Section = ".0232",
+                        Localization = 1,
+                        Issue = "2017",
+                        Validity = 2027,
+                        Gender = "H",
+                        CIC = "IDMEX1671728400"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "JORGE DE JESUS",
+                        LastNameFather = "PEREZ",
+                        LastNameMother = "SANCHEZ",
+                        Address = "C AZUCENA 234 COL PASEO DEL NOGALAR 66480 SAN NICOLAS DE LOS GARZA, N.L.",
+                        ElectroKey = "PRSNJR99120519H700",
+                        CURP = "PESJ991205HNLRNR04",
+                        BirthDate = fecha7,
+                        YearRegistration = "2018",
+                        StateProvinceId = 19,
+                        CityId = 47,
+                        Section = "1908",
+                        Localization = 1,
+                        Issue = "2018",
+                        Validity = 2028,
+                        Gender = "H",
+                        CIC = "IDMEX1777943730"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "RONALDO",
+                        LastNameFather = "GUIZAR",
+                        LastNameMother = "PONCE",
+                        Address = "C SABIDURIA 463 COL PASEO SAN NICOLAS 66446 SAN NINCOLAS DE LOS GARZA, N.L.",
+                        ElectroKey = "GZPNRN00060116H500",
+                        CURP = "GUPR000601HMNZNNA5",
+                        BirthDate = fecha8,
+                        YearRegistration = "2018",
+                        StateProvinceId = 19,
+                        CityId = 47,
+                        Section = "1897",
+                        Localization = 1,
+                        Issue = "2018",
+                        Validity = 2028,
+                        Gender = "H",
+                        CIC = "IDMEX1797426068"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "ALAN JESUS",
+                        LastNameFather = "SAPIENS",
+                        LastNameMother = "IRIBE",
+                        Address = "C MADRID 4906 COL BALCONES DEL VALLE 80184 CULIACAN, SIN",
+                        ElectroKey = "SPIRAL97122425H300",
+                        CURP = "SAIA971224HSLPRL03",
+                        BirthDate = fecha9,
+                        YearRegistration = "2016",
+                        StateProvinceId = 25,
+                        CityId = 6,
+                        Section = "1201",
+                        Localization = 1,
+                        Issue = "2016",
+                        Validity = 2026,
+                        Gender = "H",
+                        CIC = "IDMEX1472959902",
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "RUBEN",
+                        LastNameFather = "ESCOBAR",
+                        LastNameMother = "LOZANO",
+                        Address = "C ITURBIDE 602 ZONA CENTRO 65500 SALINAS VICTORIA, N.L.",
+                        ElectroKey = "ESLZRB97090119H400",
+                        CURP = "EOLR970901HNLSZB07",
+                        BirthDate = fecha10,
+                        YearRegistration = "2015",
+                        StateProvinceId = 19,
+                        CityId = 46,
+                        Section = "1755",
+                        Localization = 1,
+                        Issue = "2015",
+                        Validity = 2025,
+                        Gender = "H",
+                        CIC = "IDMEX1367474518"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "FABIAN",
+                        LastNameFather = "REBOLORIO",
+                        LastNameMother = "MENDEZ",
+                        Address = "C CIUDADELA 116 B FRACC BOSQUES DE CASTILLA 65503 SALINAS VICTORIA, N.L.",
+                        ElectroKey = "RBMNFB99053107H300",
+                        CURP = "REMF990531HCSBNB00",
+                        BirthDate = fecha11,
+                        YearRegistration = "2017",
+                        StateProvinceId = 19,
+                        CityId = 46,
+                        Section = "1760",
+                        Localization = 1,
+                        Issue = "2017",
+                        Validity = 2027,
+                        Gender = "H",
+                        CIC = "IDMEX16183295512"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "HILDA JOSELINE",
+                        LastNameFather = "ORTEGA",
+                        LastNameMother = "MORENO",
+                        Address = "C HABANA 210 COL PARAJE DE SANTA ROSA SEC NORTE 66610 APODACA, N.L.",
+                        ElectroKey = "ORMRHL00072519M000",
+                        CURP = "OEMH000725MNLRRLA5",
+                        BirthDate = fecha12,
+                        YearRegistration = "2018",
+                        StateProvinceId = 19,
+                        CityId = 6,
+                        Section = "2469",
+                        Localization = 1,
+                        Issue = "2018",
+                        Validity = 2028,
+                        Gender = "M",
+                        CIC = "IDMEX1756816884"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "FABIOLA BERENICE",
+                        LastNameFather = "JIMENEZ",
+                        LastNameMother = "ROCHA",
+                        Address = "C ZONA PONIENTE 452 COL CENTRO DE SAN NICOLAS 666400 SAN NICOLAS DE LOS GARZA, N.L.",
+                        ElectroKey = "JMRCFB98093019M100",
+                        CURP = "JIRF980930MNLMCB06",
+                        BirthDate = fecha13,
+                        YearRegistration = "2017",
+                        StateProvinceId = 19,
+                        CityId = 19,
+                        Section = ".047",
+                        Localization = 1,
+                        Issue = "2017",
+                        Validity = 2027,
+                        Gender = "M",
+                        CIC = "IDMEX1646791927"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "JESSIKA NOHEMI",
+                        LastNameFather = "DE LA CRUZ",
+                        LastNameMother = "GONZALEZ",
+                        Address = "C 2A AVENIDA 424 COL SATELITE DEL NORTE 65500 SALINAS VICTORIA, N.L.",
+                        ElectroKey = "CRGNJS98071519M700",
+                        CURP = "CUGJ980715MNLRNS02",
+                        BirthDate = fecha14,
+                        YearRegistration = "2016",
+                        StateProvinceId = 19,
+                        CityId = 46,
+                        Section = "1760",
+                        Localization = 1,
+                        Issue = "2016",
+                        Validity = 2026,
+                        Gender = "M",
+                        CIC = "IDMEX1509869514",
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "ADRIAN ALFONSO",
+                        LastNameFather = "GONZALEZ",
+                        LastNameMother = "GONZALEZ",
+                        Address = "C ZARAGOZA 104 NTE CENTRO DE CARMEN 66550 CARMEN, N.L.",
+                        ElectroKey = "GNGNAD98123019H600",
+                        CURP = "GOGA981230HNLNND08",
+                        BirthDate = fecha15,
+                        YearRegistration = "2017",
+                        StateProvinceId = 19,
+                        CityId = 10,
+                        Section = ".0218",
+                        Localization = 1,
+                        Issue = "2017",
+                        Validity = 2027,
+                        Gender = "H",
+                        CIC = "IDMEX1568040260"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "OMAR ANDRES",
+                        LastNameFather = "GARCIA",
+                        LastNameMother = "HERNANDEZ",
+                        Address = "PROL AGUILA REAL 129 A COL VILLAS DE SAN FRANCISCO 66062 GRAL ESCOBEDO, N.L.",
+                        ElectroKey = "GRHROM98022028H200",
+                        CURP = "GAHO980220HTSRRM05",
+                        BirthDate = fecha16,
+                        YearRegistration = "2016",
+                        StateProvinceId = 19,
+                        CityId = 21,
+                        Section = ".0441",
+                        Localization = 1,
+                        Issue = "2017",
+                        Validity = 2027,
+                        Gender = "H",
+                        CIC = "IDMEX157554"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "ALBA JATSIRI",
+                        LastNameFather = "GONZALEZ",
+                        LastNameMother = "ARIAS",
+                        Address = "CALLE 18 649 RDCIAL LAS PUENTES 2SEC 66460 SAN NICOLAS DE LOS GARZA, N.L.",
+                        ElectroKey = "GNARAL97032719M700",
+                        CURP = "GOAA970327MNLNRL01",
+                        BirthDate = fecha17,
+                        YearRegistration = "2014",
+                        StateProvinceId = 19,
+                        CityId = 47,
+                        Section = "1875",
+                        Localization = 1,
+                        Issue = "2014",
+                        Validity = 2024,
+                        Gender = "M",
+                        CIC = "IDMEX1244951288"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "LUIS DAVID",
+                        LastNameFather = "HARO",
+                        LastNameMother = "AGUILAR",
+                        Address = "C AZAFRAN 104 FRACC LOS AMARANTOS 66613 APODACA, N.L.",
+                        ElectroKey = "HRAGLS98092324H200",
+                        CURP = "HAAL980923HSPRGS07",
+                        BirthDate = fecha18,
+                        YearRegistration = "2016",
+                        StateProvinceId = 19,
+                        CityId = 6,
+                        Section = "2501",
+                        Localization = 1,
+                        Issue = "2016",
+                        Validity = 2026,
+                        Gender = "H",
+                        CIC = "IDMEX1533146968"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "JESUS DAVID",
+                        LastNameFather = "TORRES",
+                        LastNameMother = "GARCIA",
+                        Address = "C FRESNO 340 FRACC LOS GIRASOLES 3ER SEC 66050 GRAL. ESCOBEDO, N.L.",
+                        ElectroKey = "TRGRJS99082719H700",
+                        CURP = "TOGJ990820HNLRRS08",
+                        BirthDate = fecha19,
+                        YearRegistration = "2018",
+                        StateProvinceId = 19,
+                        CityId = 21,
+                        Section = ".0480",
+                        Localization = 1,
+                        Issue = "2018",
+                        Validity = 2028,
+                        Gender = "H",
+                        CIC = "IDMEX1747130270"
+                    });
+
+                    context.Cities.AddRange(defaultCities);
                     context.SaveChanges();
 
-                    context.CountriesRegions.AddRange(defaultCountriesRegion);
+                    context.CountriesRegion.AddRange(defaultCountriesRegion);
                     context.SaveChanges();
 
-                    context.StatesProvinces.AddRange(defaultStatesProvince);
+
+                    context.StatesProvince.AddRange(defaultStatesProvince);
+                    context.SaveChanges();
+
+                    context.Citizens.AddRange(defaultCitizens);
                     context.SaveChanges();
 
                     dbTran.Commit();
