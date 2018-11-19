@@ -19,7 +19,6 @@ namespace WebApp.Models
                 try
                 {
 
-
                     List<CountryRegion> defaultCountriesRegion = new List<CountryRegion>();
                     List<StateProvince> defaultStatesProvince = new List<StateProvince>();
                     List<City> defaultCities = new List<City>();
