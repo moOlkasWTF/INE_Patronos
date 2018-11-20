@@ -45,12 +45,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Highcharts.Web.Mvc, Version=6.2.0.0, Culture=neutral, PublicKeyToken=90b74bd27a557bd3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Highsoft.Highcharts.6.2.0.29\lib\net40\Highcharts.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.6.9.12\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="MySql.Data.Entity.EF6, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.Entity.6.9.12\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -155,6 +160,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BoletaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InformacionController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PoliticasController.cs" />
     <Compile Include="Controllers\ResultadosController.cs" />
@@ -162,9 +168,148 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Candidate.cs" />
+    <Compile Include="Models\Citizen.cs" />
+    <Compile Include="Models\City.cs" />
+    <Compile Include="Models\CountryRegion.cs" />
+    <Compile Include="Models\INE_PatronosDbContext.cs" />
+    <Compile Include="Models\INE_PatronosDbInitializer.cs" />
+    <Compile Include="Models\PoliticalParty.cs" />
+    <Compile Include="Models\Roles.cs" />
+    <Compile Include="Models\StateProvince.cs" />
+    <Compile Include="Models\Vote.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\Antlr3.Runtime.pdb" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.xml" />
+    <Content Include="bin\es\Antlr3.Runtime.pdb" />
+    <Content Include="bin\es\EntityFramework.dll" />
+    <Content Include="bin\es\EntityFramework.xml" />
+    <Content Include="bin\es\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="bin\es\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="bin\es\Microsoft.AI.DependencyCollector.xml" />
+    <Content Include="bin\es\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="bin\es\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="bin\es\Microsoft.AI.Web.dll" />
+    <Content Include="bin\es\Microsoft.AI.Web.xml" />
+    <Content Include="bin\es\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="bin\es\Microsoft.AI.WindowsServer.xml" />
+    <Content Include="bin\es\Microsoft.ApplicationInsights.dll" />
+    <Content Include="bin\es\Microsoft.AspNet.TelemetryCorrelation.dll" />
+    <Content Include="bin\es\Microsoft.AspNet.TelemetryCorrelation.xml" />
+    <Content Include="bin\es\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\es\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\es\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\es\MySql.Data.dll" />
+    <Content Include="bin\es\MySql.Data.Entity.EF6.dll" />
+    <Content Include="bin\es\Newtonsoft.Json.dll" />
+    <Content Include="bin\es\Newtonsoft.Json.xml" />
+    <Content Include="bin\es\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="bin\es\System.Diagnostics.DiagnosticSource.xml" />
+    <Content Include="bin\es\System.Web.Helpers.dll" />
+    <Content Include="bin\es\System.Web.Helpers.resources.dll" />
+    <Content Include="bin\es\System.Web.Helpers.xml" />
+    <Content Include="bin\es\System.Web.Mvc.dll" />
+    <Content Include="bin\es\System.Web.Mvc.resources.dll" />
+    <Content Include="bin\es\System.Web.Mvc.xml" />
+    <Content Include="bin\es\System.Web.Optimization.dll" />
+    <Content Include="bin\es\System.Web.Optimization.resources.dll" />
+    <Content Include="bin\es\System.Web.Optimization.xml" />
+    <Content Include="bin\es\System.Web.Razor.dll" />
+    <Content Include="bin\es\System.Web.Razor.resources.dll" />
+    <Content Include="bin\es\System.Web.Razor.xml" />
+    <Content Include="bin\es\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\es\System.Web.WebPages.Deployment.resources.dll" />
+    <Content Include="bin\es\System.Web.WebPages.Deployment.xml" />
+    <Content Include="bin\es\System.Web.WebPages.dll" />
+    <Content Include="bin\es\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\es\System.Web.WebPages.Razor.resources.dll" />
+    <Content Include="bin\es\System.Web.WebPages.Razor.xml" />
+    <Content Include="bin\es\System.Web.WebPages.resources.dll" />
+    <Content Include="bin\es\System.Web.WebPages.xml" />
+    <Content Include="bin\es\WebApp.dll" />
+    <Content Include="bin\es\WebApp.pdb" />
+    <Content Include="bin\es\WebGrease.dll" />
+    <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
+    <Content Include="bin\Microsoft.AI.DependencyCollector.xml" />
+    <Content Include="bin\Microsoft.AI.PerfCounterCollector.dll" />
+    <Content Include="bin\Microsoft.AI.ServerTelemetryChannel.dll" />
+    <Content Include="bin\Microsoft.AI.Web.dll" />
+    <Content Include="bin\Microsoft.AI.Web.xml" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.dll" />
+    <Content Include="bin\Microsoft.AI.WindowsServer.xml" />
+    <Content Include="bin\Microsoft.ApplicationInsights.dll" />
+    <Content Include="bin\Microsoft.AspNet.TelemetryCorrelation.dll" />
+    <Content Include="bin\Microsoft.AspNet.TelemetryCorrelation.xml" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\MySql.Data.dll" />
+    <Content Include="bin\MySql.Data.Entity.EF6.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\csi.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\roslyn\System.AppContext.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Console.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\System.Security.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.Security.Claims.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="bin\roslyn\System.Security.Principal.Windows.dll" />
+    <Content Include="bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="bin\roslyn\System.ValueTuple.dll" />
+    <Content Include="bin\roslyn\System.Xml.ReaderWriter.dll" />
+    <Content Include="bin\roslyn\System.Xml.XmlDocument.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="bin\System.Diagnostics.DiagnosticSource.xml" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Helpers.xml" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Mvc.xml" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Optimization.xml" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\System.Web.WebPages.Deployment.xml" />
+    <Content Include="bin\System.Web.WebPages.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.xml" />
+    <Content Include="bin\WebApp.dll" />
+    <Content Include="bin\WebApp.pdb" />
+    <Content Include="bin\WebGrease.dll" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -177,11 +322,59 @@
     <Content Include="Imagenes\CIC.png" />
     <Content Include="Imagenes\CLave de Elector.png" />
     <Content Include="Imagenes\Ine Logo.png" />
+    <Content Include="Images\Fotos\CUGJ980715MNLRNS02.jpeg" />
+    <Content Include="Images\Fotos\EOLR970901HNLSZB07.jpeg" />
+    <Content Include="Images\Fotos\GAHO980220HTSRRM05.jpeg" />
+    <Content Include="Images\Fotos\GAMV000420HNLRNCA5.jpeg" />
+    <Content Include="Images\Fotos\GOAA970327MNLNRL01.jpeg" />
+    <Content Include="Images\Fotos\GOFJ971020HNLNR04.jpeg" />
+    <Content Include="Images\Fotos\GOGA981230HNLNND08.jpeg" />
+    <Content Include="Images\Fotos\GOSE990311HNLNLD07.jpeg" />
+    <Content Include="Images\Fotos\GUPR000601HMNZNNA5.jpeg" />
+    <Content Include="Images\Fotos\GURJ990109HNLRDN03.jpeg" />
+    <Content Include="Images\Fotos\HAAL980923HSPRGS07.jpeg" />
+    <Content Include="Images\Fotos\HETA980602HNLRRR03.jpeg" />
+    <Content Include="Images\Fotos\JIRF980930MNLMCB06.jpeg" />
+    <Content Include="Images\Fotos\LORP990806HNLPVD04.jpeg" />
+    <Content Include="Images\Fotos\OEMH000725MNLRRLA5.jpeg" />
+    <Content Include="Images\Fotos\PESJ991205HNLRNR04.jpeg" />
+    <Content Include="Images\Fotos\REMF990531HCSBNB00.jpeg" />
+    <Content Include="Images\Fotos\SAIA971224HSLPRL03.jpeg" />
+    <Content Include="Images\Fotos\TOGJ990820HNLRRS08.jpeg" />
+    <Content Include="Images\Fotos\WhatsApp Image 2018-11-13 at 10.17.28 AM%281%29.jpeg" />
+    <Content Include="Images\LogosPartidosPoliticos\MovimientoCiudadano.png" />
+    <Content Include="Images\LogosPartidosPoliticos\NuevaAlianza.png" />
+    <Content Include="Images\LogosPartidosPoliticos\PartidoAccionNacional.png" />
+    <Content Include="Images\LogosPartidosPoliticos\PartidodelaRevoluciónDemocrática.png" />
+    <Content Include="Images\LogosPartidosPoliticos\PartidodelTrabajo.png" />
+    <Content Include="Images\LogosPartidosPoliticos\PartidoRevolucionarioInstitucional.png" />
+    <Content Include="Images\LogosPartidosPoliticos\PartidoVerdeEcologista.png" />
+    <Content Include="obj\Debug\WebApp.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\WebApp.dll" />
+    <Content Include="obj\Debug\WebApp.pdb" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="bin\ApplicationInsights.config" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="bin\roslyn\csc.rsp" />
+    <Content Include="bin\roslyn\csi.exe.config" />
+    <Content Include="bin\roslyn\csi.rsp" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.Managed.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\roslyn\vbc.rsp" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="bin\WebApp.dll.config" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\WebApp.csproj.CopyComplete" />
+    <Content Include="obj\Debug\WebApp.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\WebApp.csprojAssemblyReference.cache" />
+    <Content Include="bin\es\ApplicationInsights.config" />
+    <Content Include="bin\es\WebApp.dll.config" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\Chart\exporting.js" />
     <Content Include="Scripts\Chart\highcharts.js" />
@@ -212,10 +405,11 @@
     <Content Include="Views\Resultados\Resultados.cshtml" />
     <Content Include="Views\TuInformacion\TuInformacion.cshtml" />
     <Content Include="Views\Boleta\Boleta.cshtml" />
+    <Content Include="Views\Informacion\Informacion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="obj\Debug\TempPE\" />
     <Folder Include="P_Repository\IRepository\" />
     <Folder Include="P_Repository\Repository\" />
   </ItemGroup>
