@@ -7,6 +7,7 @@ using System.Web;
 
 namespace WebApp.Models
 {
+    [DbConfigurationType(typeof(MySql.Data.Entity.MySqlEFConfiguration))]
     public class INE_PatronosDbContext : DbContext
     {
 

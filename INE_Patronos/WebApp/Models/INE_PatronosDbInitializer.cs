@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Web;
 
@@ -590,6 +592,26 @@ namespace WebApp.Models
                         Gender = "H",
                         CIC = "IDMEX1747130270"
                     });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "JUAN GUSTAVO",
+                        LastNameFather = "SALAS",
+                        LastNameMother = "FLORES",
+                        Address = "Jarrilla #630 EBANOS SEGUNDO SECTOR. APODACA, N.L.",
+                        ElectroKey = "SFJG97561348H943",
+                        CURP = "SAFJ970612HNLLLN01",
+                        BirthDate = fecha19,
+                        YearRegistration = "2018",
+                        StateProvinceId = 19,
+                        CityId = 21,
+                        Section = ".0620",
+                        Localization = 1,
+                        Issue = "2018",
+                        Validity = 2028,
+                        Gender = "H",
+                        CIC = "IDMEX18365777170"
+                    });
+
 
                     context.Cities.AddRange(defaultCities);
                     context.SaveChanges();
