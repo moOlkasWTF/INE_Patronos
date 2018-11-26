@@ -29,7 +29,7 @@ namespace WebApp.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(nullable: false, maxLength: 30, unicode: false, storeType: "nvarchar"),
+                        Name = c.String(nullable: false, maxLength: 50, unicode: false, storeType: "nvarchar"),
                         Description = c.String(nullable: false, maxLength: 100, unicode: false, storeType: "nvarchar"),
                         Foundation = c.String(nullable: false, maxLength: 100, unicode: false, storeType: "nvarchar"),
                     })

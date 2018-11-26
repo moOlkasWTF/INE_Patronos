@@ -253,394 +253,393 @@ namespace WebApp.Models
                     defaultCities.Add(new City() { StateProvinceId = 2, CountryRegionId = 1, CveEnt = "14", CveCity = "125", Description = "SAN IGNACIO CERRO RDO", CveCab = "1", NameCab = "SAN IGNACIO CERRO RDO", PTOT = "17626", PMAS = "8501", PFEM = "9125", VTOT = "4171" });
                     #endregion
 
+                    #region Credenciales
 
-                    //#region Credenciales
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "JUAN GERARDO",
+                        LastNameFather = "GUERRA",
+                        LastNameMother = "RODRIGUEZ",
+                        Address = "AV. GALAXIA 144 COL. METROPLEX 1ER. SEC 66612 APODACA, N.L.",
+                        ElectroKey = "GRRDJN9901919H7000",
+                        CURP = "GURJ990109HNLRDN03",
+                        BirthDate = "09-01-1999",
+                        YearRegistration = "2017",
+                        StateProvinceId = 1,
+                        CityId = 6,
+                        Section = "0069",
+                        Localization = "1",
+                        Issue = "2017",
+                        Validity = "2027",
+                        Gender = "H",
+                        CIC = "IDMEX1558771189"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "VICENTE",
+                        LastNameFather = "GARCIA",
+                        LastNameMother = "MENDOZA",
+                        Address = "C NOCHE BUENA 334 FRACC NUEVO LAS PUENTES 3ER SECTOR 66612 APODACA, N.L.",
+                        ElectroKey = "GRMNVC00042019H900",
+                        CURP = "GAMV000420HNLRNCA5",
+                        BirthDate = "20-04-2000",
+                        YearRegistration = "2018",
+                        StateProvinceId = 1,
+                        CityId = 6,
+                        Section = "2429",
+                        Localization = "1",
+                        Issue = "2018",
+                        Validity = "2028",
+                        Gender = "H",
+                        CIC = "IDMEX1780284813"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "ARTURO ASAEL",
+                        LastNameFather = "HERNANDEZ",
+                        LastNameMother = "TORRES",
+                        Address = "AV LOS AMARANTOS 411 FRACC LOS AMARANTOS 66613 APODACA, N.L.",
+                        ElectroKey = "HRTRAR98060219H000",
+                        CURP = "HETA980602HNLRRR03",
+                        BirthDate = "02-06-1999",
+                        YearRegistration = "2016",
+                        StateProvinceId = 1,
+                        CityId = 6,
+                        Section = "2501",
+                        Localization = "1",
+                        Issue = "2016",
+                        Validity = "2026",
+                        Gender = "H",
+                        CIC = "IDMEX1510744914"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "PEDRO ARMANDO",
+                        LastNameFather = "LOPEZ",
+                        LastNameMother = "RIVERA",
+                        Address = "C VIVERO DEL ROCIO 105 FRACC PORTAL DE LAS SALINAS 65550 CIENEGA DE FLORES, N.L.",
+                        ElectroKey = "LPRVPD99080619H400",
+                        CURP = "LORP990806HNLPVD04",
+                        BirthDate = "06-08-1999",
+                        YearRegistration = "2017",
+                        StateProvinceId = 1,
+                        CityId = 6,
+                        Section = "0232",
+                        Localization = "1",
+                        Issue = "2017",
+                        Validity = "2027",
+                        Gender = "H",
+                        CIC = "IDMEX1671728400"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "ALAN JESUS",
+                        LastNameFather = "SAPIENS",
+                        LastNameMother = "IRIBE",
+                        Address = "C MADRID 4906 COL BALCONES DEL VALLE 80184 CULIACAN, SIN",
+                        ElectroKey = "SPIRAL97122425H300",
+                        CURP = "SAIA971224HSLPRL03",
+                        BirthDate = "24-12-1997",
+                        YearRegistration = "2016",
+                        StateProvinceId = 1,
+                        CityId = 6,
+                        Section = "1201",
+                        Localization = "1",
+                        Issue = "2016",
+                        Validity = "2026",
+                        Gender = "H",
+                        CIC = "IDMEX1472959902",
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "HILDA JOSELINE",
+                        LastNameFather = "ORTEGA",
+                        LastNameMother = "MORENO",
+                        Address = "C HABANA 210 COL PARAJE DE SANTA ROSA SEC NORTE 66610 APODACA, N.L.",
+                        ElectroKey = "ORMRHL00072519M000",
+                        CURP = "OEMH000725MNLRRLA5",
+                        BirthDate = "25-07-2000",
+                        YearRegistration = "2018",
+                        StateProvinceId = 1,
+                        CityId = 6,
+                        Section = "2469",
+                        Localization = "1",
+                        Issue = "2018",
+                        Validity = "2028",
+                        Gender = "M",
+                        CIC = "IDMEX1756816884"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "LUIS DAVID",
+                        LastNameFather = "HARO",
+                        LastNameMother = "AGUILAR",
+                        Address = "C AZAFRAN 104 FRACC LOS AMARANTOS 66613 APODACA, N.L.",
+                        ElectroKey = "HRAGLS98092324H200",
+                        CURP = "HAAL980923HSPRGS07",
+                        BirthDate = "23-09-1998",
+                        YearRegistration = "2016",
+                        StateProvinceId = 1,
+                        CityId = 6,
+                        Section = "2501",
+                        Localization = "1",
+                        Issue = "2016",
+                        Validity = "2026",
+                        Gender = "H",
+                        CIC = "IDMEX1533146968"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "JUAN GUSTAVO",
+                        LastNameFather = "SALAS",
+                        LastNameMother = "FLORES",
+                        Address = "Jarrilla #630 EBANOS SEGUNDO SECTOR. APODACA, N.L.",
+                        ElectroKey = "SFJG97561348H94300",
+                        CURP = "SAFJ970612HNLLLN01",
+                        BirthDate = "12-06-1997",
+                        YearRegistration = "2018",
+                        StateProvinceId = 1,
+                        CityId = 6,
+                        Section = "0620",
+                        Localization = "1",
+                        Issue = "2018",
+                        Validity = "2028",
+                        Gender = "H",
+                        CIC = "IDMEX1836577717"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "JONATHAN",
+                        LastNameFather = "GONZALEZ",
+                        LastNameMother = "FERNANDEZ",
+                        Address = "GRAL PABLO DE LA GARZA 247 COL JARDINES DE ESCOBEDO 1ER. SEC 66050 GRAL. ESCOBEDO, N.L.",
+                        ElectroKey = "GNFRJN97102019H800",
+                        CURP = "GOFJ971020HNLNR04",
+                        BirthDate = "20-10-1997",
+                        YearRegistration = "2015",
+                        StateProvinceId = 1,
+                        CityId = 21,
+                        Section = "0451",
+                        Localization = "1",
+                        Issue = "2015",
+                        Validity = "2025",
+                        Gender = "H",
+                        CIC = "IDMEX1369817135"
+                    });
 
-                    //defaultCitizens.Add(new Citizen()
-                    //{
-                    //    Name = "JONATHAN",
-                    //    LastNameFather = "GONZALEZ",
-                    //    LastNameMother = "FERNANDEZ",
-                    //    Address = "GRAL PABLO DE LA GARZA 247 COL JARDINES DE ESCOBEDO 1ER. SEC 66050 GRAL. ESCOBEDO, N.L.",
-                    //    ElectroKey = "GNFRJN97102019H800",
-                    //    CURP = "GOFJ971020HNLNR04",
-                    //    BirthDate = "20-10-1997",
-                    //    YearRegistration = "2015",
-                    //    StateProvinceId = 19,
-                    //    CityId = 21,
-                    //    Section = ".0451",
-                    //    Localization = 1,
-                    //    Issue = "2015",
-                    //    Validity = 2025,
-                    //    Gender = "H",
-                    //    CIC = "IDMEX1369817135"
-                    //});
-                    //defaultCitizens.Add(new Citizen()
-                    //{
-                    //    Name = "JUAN GERARDO GUERRA RODRIGUEZ",
-                    //    LastNameFather = "GUERRA",
-                    //    LastNameMother = "RODRIGUEZ",
-                    //    Address = "AV. GALAXIA 144 COL. METROPLEX 1ER. SEC 66612 APODACA, N.L.",
-                    //    ElectroKey = "GRRDJN9901919H700",
-                    //    CURP = "GURJ990109HNLRDN03",
-                    //    BirthDate = "09-01-1999",
-                    //    YearRegistration = "2017",
-                    //    StateProvinceId = 19,
-                    //    CityId = 6,
-                    //    Section = ".0069",
-                    //    Localization = 1,
-                    //    Issue = "2017",
-                    //    Validity = 2027,
-                    //    Gender = "H",
-                    //    CIC = "IDMEX1558771189"
-                    //});
-                    //defaultCitizens.Add(new Citizen()
-                    //{
-                    //    Name = "EDGAR ALFREDO",
-                    //    LastNameFather = "GONZALEZ",
-                    //    LastNameMother = "SALAZAR",
-                    //    Address = "C DIEGO DE MONTEMAYOR 600 B AMPL LAZARO CARDENAS 66058 GRAL ESCOBEDO, N.L.",
-                    //    ElectroKey = "GNSLED99031119H000",
-                    //    CURP = "GOSE990311HNLNLD07",
-                    //    BirthDate = "11-03-1999",
-                    //    YearRegistration = "2017",
-                    //    StateProvinceId = 19,
-                    //    CityId = 21,
-                    //    Section = ".0454",
-                    //    Localization = 1,
-                    //    Issue = "2017",
-                    //    Validity = 2027,
-                    //    Gender = "H",
-                    //    CIC = "IDMEX1605645443"
-                    //});
-                    //defaultCitizens.Add(new Citizen()
-                    //{
-                    //    Name = "VICENTE",
-                    //    LastNameFather = "GARCIA",
-                    //    LastNameMother = "MENDOZA",
-                    //    Address = "C NOCHE BUENA 334 FRACC NUEVO LAS PUENTES 3ER SECTOR 66612 APODACA, N.L.",
-                    //    ElectroKey = "GRMNVC00042019H900",
-                    //    CURP = "GAMV000420HNLRNCA5",
-                    //    BirthDate = "20-04-2000",
-                    //    YearRegistration = "2018",
-                    //    StateProvinceId = 19,
-                    //    CityId = 6,
-                    //    Section = "2429",
-                    //    Localization = 1,
-                    //    Issue = "2018",
-                    //    Validity = 2028,
-                    //    Gender = "H",
-                    //    CIC = "IDMEX1780284813"
-                    //});
-                    //defaultCitizens.Add(new Citizen()
-                    //{
-                    //    Name = "ARTURO ASAEL",
-                    //    LastNameFather = "HERNANDEZ",
-                    //    LastNameMother = "TORRES",
-                    //    Address = "AV LOS AMARANTOS 411 FRACC LOS AMARANTOS 66613 APODACA, N.L.",
-                    //    ElectroKey = "HRTRAR98060219H000",
-                    //    CURP = "HETA980602HNLRRR03",
-                    //    BirthDate = "02-06-1999",
-                    //    YearRegistration = "2016",
-                    //    StateProvinceId = 19,
-                    //    CityId = 6,
-                    //    Section = "2501",
-                    //    Localization = 1,
-                    //    Issue = "2016",
-                    //    Validity = 2026,
-                    //    Gender = "H",
-                    //    CIC = "IDMEX1510744914"
-                    //});
-                    //defaultCitizens.Add(new Citizen()
-                    //{
-                    //    Name = "PEDRO ARMANDO",
-                    //    LastNameFather = "LOPEZ",
-                    //    LastNameMother = "RIVERA",
-                    //    Address = "C VIVERO DEL ROCIO 105 FRACC PORTAL DE LAS SALINAS 65550 CIENEGA DE FLORES, N.L.",
-                    //    ElectroKey = "LPRVPD99080619H400",
-                    //    CURP = "LORP990806HNLPVD04",
-                    //    BirthDate = "06-08-1999",
-                    //    YearRegistration = "2017",
-                    //    StateProvinceId = 19,
-                    //    CityId = 6,
-                    //    Section = ".0232",
-                    //    Localization = 1,
-                    //    Issue = "2017",
-                    //    Validity = 2027,
-                    //    Gender = "H",
-                    //    CIC = "IDMEX1671728400"
-                    //});
-                    //defaultCitizens.Add(new Citizen()
-                    //{
-                    //    Name = "JORGE DE JESUS",
-                    //    LastNameFather = "PEREZ",
-                    //    LastNameMother = "SANCHEZ",
-                    //    Address = "C AZUCENA 234 COL PASEO DEL NOGALAR 66480 SAN NICOLAS DE LOS GARZA, N.L.",
-                    //    ElectroKey = "PRSNJR99120519H700",
-                    //    CURP = "PESJ991205HNLRNR04",
-                    //    BirthDate = "05-12-1999",
-                    //    YearRegistration = "2018",
-                    //    StateProvinceId = 19,
-                    //    CityId = 46,
-                    //    Section = "1908",
-                    //    Localization = 1,
-                    //    Issue = "2018",
-                    //    Validity = 2028,
-                    //    Gender = "H",
-                    //    CIC = "IDMEX1777943730"
-                    //});
-                    //defaultCitizens.Add(new Citizen()
-                    //{
-                    //    Name = "RONALDO",
-                    //    LastNameFather = "GUIZAR",
-                    //    LastNameMother = "PONCE",
-                    //    Address = "C SABIDURIA 463 COL PASEO SAN NICOLAS 66446 SAN NINCOLAS DE LOS GARZA, N.L.",
-                    //    ElectroKey = "GZPNRN00060116H500",
-                    //    CURP = "GUPR000601HMNZNNA5",
-                    //    BirthDate = "01-06-2000",
-                    //    YearRegistration = "2018",
-                    //    StateProvinceId = 19,
-                    //    CityId = 46,
-                    //    Section = "1897",
-                    //    Localization = 1,
-                    //    Issue = "2018",
-                    //    Validity = 2028,
-                    //    Gender = "H",
-                    //    CIC = "IDMEX1797426068"
-                    //});
-                    //defaultCitizens.Add(new Citizen()
-                    //{
-                    //    Name = "ALAN JESUS",
-                    //    LastNameFather = "SAPIENS",
-                    //    LastNameMother = "IRIBE",
-                    //    Address = "C MADRID 4906 COL BALCONES DEL VALLE 80184 CULIACAN, SIN",
-                    //    ElectroKey = "SPIRAL97122425H300",
-                    //    CURP = "SAIA971224HSLPRL03",
-                    //    BirthDate = "24-12-1997",
-                    //    YearRegistration = "2016",
-                    //    StateProvinceId = 25,
-                    //    CityId = 6,
-                    //    Section = "1201",
-                    //    Localization = 1,
-                    //    Issue = "2016",
-                    //    Validity = 2026,
-                    //    Gender = "H",
-                    //    CIC = "IDMEX1472959902",
-                    //});
-                    //defaultCitizens.Add(new Citizen()
-                    //{
-                    //    Name = "RUBEN",
-                    //    LastNameFather = "ESCOBAR",
-                    //    LastNameMother = "LOZANO",
-                    //    Address = "C ITURBIDE 602 ZONA CENTRO 65500 SALINAS VICTORIA, N.L.",
-                    //    ElectroKey = "ESLZRB97090119H400",
-                    //    CURP = "EOLR970901HNLSZB07",
-                    //    BirthDate = "01-09-1997",
-                    //    YearRegistration = "2015",
-                    //    StateProvinceId = 19,
-                    //    CityId = 45,
-                    //    Section = "1755",
-                    //    Localization = 1,
-                    //    Issue = "2015",
-                    //    Validity = 2025,
-                    //    Gender = "H",
-                    //    CIC = "IDMEX1367474518"
-                    //});
-                    //defaultCitizens.Add(new Citizen()
-                    //{
-                    //    Name = "FABIAN",
-                    //    LastNameFather = "REBOLORIO",
-                    //    LastNameMother = "MENDEZ",
-                    //    Address = "C CIUDADELA 116 B FRACC BOSQUES DE CASTILLA 65503 SALINAS VICTORIA, N.L.",
-                    //    ElectroKey = "RBMNFB99053107H300",
-                    //    CURP = "REMF990531HCSBNB00",
-                    //    BirthDate = "31-05-1999",
-                    //    YearRegistration = "2017",
-                    //    StateProvinceId = 19,
-                    //    CityId = 45,
-                    //    Section = "1760",
-                    //    Localization = 1,
-                    //    Issue = "2017",
-                    //    Validity = 2027,
-                    //    Gender = "H",
-                    //    CIC = "IDMEX16183295512"
-                    //});
-                    //defaultCitizens.Add(new Citizen()
-                    //{
-                    //    Name = "HILDA JOSELINE",
-                    //    LastNameFather = "ORTEGA",
-                    //    LastNameMother = "MORENO",
-                    //    Address = "C HABANA 210 COL PARAJE DE SANTA ROSA SEC NORTE 66610 APODACA, N.L.",
-                    //    ElectroKey = "ORMRHL00072519M000",
-                    //    CURP = "OEMH000725MNLRRLA5",
-                    //    BirthDate = "25-07-2000",
-                    //    YearRegistration = "2018",
-                    //    StateProvinceId = 19,
-                    //    CityId = 6,
-                    //    Section = "2469",
-                    //    Localization = 1,
-                    //    Issue = "2018",
-                    //    Validity = 2028,
-                    //    Gender = "M",
-                    //    CIC = "IDMEX1756816884"
-                    //});
-                    //defaultCitizens.Add(new Citizen()
-                    //{
-                    //    Name = "FABIOLA BERENICE",
-                    //    LastNameFather = "JIMENEZ",
-                    //    LastNameMother = "ROCHA",
-                    //    Address = "C ZONA PONIENTE 452 COL CENTRO DE SAN NICOLAS 666400 SAN NICOLAS DE LOS GARZA, N.L.",
-                    //    ElectroKey = "JMRCFB98093019M100",
-                    //    CURP = "JIRF980930MNLMCB06",
-                    //    BirthDate = "30-09-1998",
-                    //    YearRegistration = "2017",
-                    //    StateProvinceId = 19,
-                    //    CityId = 46,
-                    //    Section = ".047",
-                    //    Localization = 1,
-                    //    Issue = "2017",
-                    //    Validity = 2027,
-                    //    Gender = "M",
-                    //    CIC = "IDMEX1646791927"
-                    //});
-                    //defaultCitizens.Add(new Citizen()
-                    //{
-                    //    Name = "JESSIKA NOHEMI",
-                    //    LastNameFather = "DE LA CRUZ",
-                    //    LastNameMother = "GONZALEZ",
-                    //    Address = "C 2A AVENIDA 424 COL SATELITE DEL NORTE 65500 SALINAS VICTORIA, N.L.",
-                    //    ElectroKey = "CRGNJS98071519M700",
-                    //    CURP = "CUGJ980715MNLRNS02",
-                    //    BirthDate = "15-07-1998",
-                    //    YearRegistration = "2016",
-                    //    StateProvinceId = 19,
-                    //    CityId = 45,
-                    //    Section = "1760",
-                    //    Localization = 1,
-                    //    Issue = "2016",
-                    //    Validity = 2026,
-                    //    Gender = "M",
-                    //    CIC = "IDMEX1509869514",
-                    //});
-                    //defaultCitizens.Add(new Citizen()
-                    //{
-                    //    Name = "ADRIAN ALFONSO",
-                    //    LastNameFather = "GONZALEZ",
-                    //    LastNameMother = "GONZALEZ",
-                    //    Address = "C ZARAGOZA 104 NTE CENTRO DE CARMEN 66550 CARMEN, N.L.",
-                    //    ElectroKey = "GNGNAD98123019H600",
-                    //    CURP = "GOGA981230HNLNND08",
-                    //    BirthDate = "30-12-1998",
-                    //    YearRegistration = "2017",
-                    //    StateProvinceId = 19,
-                    //    CityId = 45,
-                    //    Section = ".0218",
-                    //    Localization = 1,
-                    //    Issue = "2017",
-                    //    Validity = 2027,
-                    //    Gender = "H",
-                    //    CIC = "IDMEX1568040260"
-                    //});
-                    //defaultCitizens.Add(new Citizen()
-                    //{
-                    //    Name = "OMAR ANDRES",
-                    //    LastNameFather = "GARCIA",
-                    //    LastNameMother = "HERNANDEZ",
-                    //    Address = "PROL AGUILA REAL 129 A COL VILLAS DE SAN FRANCISCO 66062 GRAL ESCOBEDO, N.L.",
-                    //    ElectroKey = "GRHROM98022028H200",
-                    //    CURP = "GAHO980220HTSRRM05",
-                    //    BirthDate = "20-02-1998",
-                    //    YearRegistration = "2016",
-                    //    StateProvinceId = 19,
-                    //    CityId = 21,
-                    //    Section = ".0441",
-                    //    Localization = 1,
-                    //    Issue = "2017",
-                    //    Validity = 2027,
-                    //    Gender = "H",
-                    //    CIC = "IDMEX157554"
-                    //});
-                    //defaultCitizens.Add(new Citizen()
-                    //{
-                    //    Name = "ALBA JATSIRI",
-                    //    LastNameFather = "GONZALEZ",
-                    //    LastNameMother = "ARIAS",
-                    //    Address = "CALLE 18 649 RDCIAL LAS PUENTES 2SEC 66460 SAN NICOLAS DE LOS GARZA, N.L.",
-                    //    ElectroKey = "GNARAL97032719M700",
-                    //    CURP = "GOAA970327MNLNRL01",
-                    //    BirthDate = "20-03-1997",
-                    //    YearRegistration = "2014",
-                    //    StateProvinceId = 19,
-                    //    CityId = 46,
-                    //    Section = "1875",
-                    //    Localization = 1,
-                    //    Issue = "2014",
-                    //    Validity = 2024,
-                    //    Gender = "M",
-                    //    CIC = "IDMEX1244951288"
-                    //});
-                    //defaultCitizens.Add(new Citizen()
-                    //{
-                    //    Name = "LUIS DAVID",
-                    //    LastNameFather = "HARO",
-                    //    LastNameMother = "AGUILAR",
-                    //    Address = "C AZAFRAN 104 FRACC LOS AMARANTOS 66613 APODACA, N.L.",
-                    //    ElectroKey = "HRAGLS98092324H200",
-                    //    CURP = "HAAL980923HSPRGS07",
-                    //    BirthDate = "23-09-1998",
-                    //    YearRegistration = "2016",
-                    //    StateProvinceId = 19,
-                    //    CityId = 6,
-                    //    Section = "2501",
-                    //    Localization = 1,
-                    //    Issue = "2016",
-                    //    Validity = 2026,
-                    //    Gender = "H",
-                    //    CIC = "IDMEX1533146968"
-                    //});
-                    //defaultCitizens.Add(new Citizen()
-                    //{
-                    //    Name = "JESUS DAVID",
-                    //    LastNameFather = "TORRES",
-                    //    LastNameMother = "GARCIA",
-                    //    Address = "C FRESNO 340 FRACC LOS GIRASOLES 3ER SEC 66050 GRAL. ESCOBEDO, N.L.",
-                    //    ElectroKey = "TRGRJS99082719H700",
-                    //    CURP = "TOGJ990820HNLRRS08",
-                    //    BirthDate = "31-05-1999",
-                    //    YearRegistration = "2018",
-                    //    StateProvinceId = 19,
-                    //    CityId = 21,
-                    //    Section = ".0480",
-                    //    Localization = 1,
-                    //    Issue = "2018",
-                    //    Validity = 2028,
-                    //    Gender = "H",
-                    //    CIC = "IDMEX1747130270"
-                    //});
-                    //defaultCitizens.Add(new Citizen()
-                    //{
-                    //    Name = "JUAN GUSTAVO",
-                    //    LastNameFather = "SALAS",
-                    //    LastNameMother = "FLORES",
-                    //    Address = "Jarrilla #630 EBANOS SEGUNDO SECTOR. APODACA, N.L.",
-                    //    ElectroKey = "SFJG97561348H943",
-                    //    CURP = "SAFJ970612HNLLLN01",
-                    //    BirthDate = "12-06-1997",
-                    //    YearRegistration = "2018",
-                    //    StateProvinceId = 19,
-                    //    CityId = 6,
-                    //    Section = ".0620",
-                    //    Localization = 1,
-                    //    Issue = "2018",
-                    //    Validity = 2028,
-                    //    Gender = "H",
-                    //    CIC = "IDMEX18365777170"
-                    //});
-                    //#endregion
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "EDGAR ALFREDO",
+                        LastNameFather = "GONZALEZ",
+                        LastNameMother = "SALAZAR",
+                        Address = "C DIEGO DE MONTEMAYOR 600 B AMPL LAZARO CARDENAS 66058 GRAL ESCOBEDO, N.L.",
+                        ElectroKey = "GNSLED99031119H000",
+                        CURP = "GOSE990311HNLNLD07",
+                        BirthDate = "11-03-1999",
+                        YearRegistration = "2017",
+                        StateProvinceId = 1,
+                        CityId = 21,
+                        Section = ".0454",
+                        Localization = "1",
+                        Issue = "2017",
+                        Validity = "2027",
+                        Gender = "H",
+                        CIC = "IDMEX1605645443"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "OMAR ANDRES",
+                        LastNameFather = "GARCIA",
+                        LastNameMother = "HERNANDEZ",
+                        Address = "PROL AGUILA REAL 129 A COL VILLAS DE SAN FRANCISCO 66062 GRAL ESCOBEDO, N.L.",
+                        ElectroKey = "GRHROM98022028H200",
+                        CURP = "GAHO980220HTSRRM05",
+                        BirthDate = "20-02-1998",
+                        YearRegistration = "2016",
+                        StateProvinceId = 1,
+                        CityId = 21,
+                        Section = ".0441",
+                        Localization = "1",
+                        Issue = "2017",
+                        Validity = "2027",
+                        Gender = "H",
+                        CIC = "IDMEX157554"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "JESUS DAVID",
+                        LastNameFather = "TORRES",
+                        LastNameMother = "GARCIA",
+                        Address = "C FRESNO 340 FRACC LOS GIRASOLES 3ER SEC 66050 GRAL. ESCOBEDO, N.L.",
+                        ElectroKey = "TRGRJS99082719H700",
+                        CURP = "TOGJ990820HNLRRS08",
+                        BirthDate = "31-05-1999",
+                        YearRegistration = "2018",
+                        StateProvinceId = 1,
+                        CityId = 21,
+                        Section = ".0480",
+                        Localization = "1",
+                        Issue = "2018",
+                        Validity = "2028",
+                        Gender = "H",
+                        CIC = "IDMEX1747130270"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "RUBEN",
+                        LastNameFather = "ESCOBAR",
+                        LastNameMother = "LOZANO",
+                        Address = "C ITURBIDE 602 ZONA CENTRO 65500 SALINAS VICTORIA, N.L.",
+                        ElectroKey = "ESLZRB97090119H400",
+                        CURP = "EOLR970901HNLSZB07",
+                        BirthDate = "01-09-1997",
+                        YearRegistration = "2015",
+                        StateProvinceId = 1,
+                        CityId = 44,
+                        Section = "1755",
+                        Localization = "1",
+                        Issue = "2015",
+                        Validity = "2025",
+                        Gender = "H",
+                        CIC = "IDMEX1367474518"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "FABIAN",
+                        LastNameFather = "REBOLORIO",
+                        LastNameMother = "MENDEZ",
+                        Address = "C CIUDADELA 116 B FRACC BOSQUES DE CASTILLA 65503 SALINAS VICTORIA, N.L.",
+                        ElectroKey = "RBMNFB99053107H300",
+                        CURP = "REMF990531HCSBNB000",
+                        BirthDate = "31-05-1999",
+                        YearRegistration = "2017",
+                        StateProvinceId = 1,
+                        CityId = 44,
+                        Section = "1760",
+                        Localization = "1",
+                        Issue = "2017",
+                        Validity = "2027",
+                        Gender = "H",
+                        CIC = "IDMEX1618329551"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "JESSIKA NOHEMI",
+                        LastNameFather = "DE LA CRUZ",
+                        LastNameMother = "GONZALEZ",
+                        Address = "C 2A AVENIDA 424 COL SATELITE DEL NORTE 65500 SALINAS VICTORIA, N.L.",
+                        ElectroKey = "CRGNJS98071519M700",
+                        CURP = "CUGJ980715MNLRNS02",
+                        BirthDate = "15-07-1998",
+                        YearRegistration = "2016",
+                        StateProvinceId = 1,
+                        CityId = 44,
+                        Section = "1760",
+                        Localization = "1",
+                        Issue = "2016",
+                        Validity = "2026",
+                        Gender = "M",
+                        CIC = "IDMEX1509869514",
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "ADRIAN ALFONSO",
+                        LastNameFather = "GONZALEZ",
+                        LastNameMother = "GONZALEZ",
+                        Address = "C ZARAGOZA 104 NTE CENTRO DE CARMEN 66550 CARMEN, N.L.",
+                        ElectroKey = "GNGNAD98123019H600",
+                        CURP = "GOGA981230HNLNND08",
+                        BirthDate = "30-12-1998",
+                        YearRegistration = "2017",
+                        StateProvinceId = 1,
+                        CityId = 44,
+                        Section = "0218",
+                        Localization = "1",
+                        Issue = "2017",
+                        Validity = "2027",
+                        Gender = "H",
+                        CIC = "IDMEX1568040260"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "JORGE DE JESUS",
+                        LastNameFather = "PEREZ",
+                        LastNameMother = "SANCHEZ",
+                        Address = "C AZUCENA 234 COL PASEO DEL NOGALAR 66480 SAN NICOLAS DE LOS GARZA, N.L.",
+                        ElectroKey = "PRSNJR99120519H700",
+                        CURP = "PESJ991205HNLRNR04",
+                        BirthDate = "05-12-1999",
+                        YearRegistration = "2018",
+                        StateProvinceId = 1,
+                        CityId = 45,
+                        Section = "1908",
+                        Localization = "1",
+                        Issue = "2018",
+                        Validity = "2028",
+                        Gender = "H",
+                        CIC = "IDMEX1777943730"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "RONALDO",
+                        LastNameFather = "GUIZAR",
+                        LastNameMother = "PONCE",
+                        Address = "C SABIDURIA 463 COL PASEO SAN NICOLAS 66446 SAN NINCOLAS DE LOS GARZA, N.L.",
+                        ElectroKey = "GZPNRN00060116H500",
+                        CURP = "GUPR000601HMNZNNA5",
+                        BirthDate = "01-06-2000",
+                        YearRegistration = "2018",
+                        StateProvinceId = 1,
+                        CityId = 45,
+                        Section = "1897",
+                        Localization = "1",
+                        Issue = "2018",
+                        Validity = "2028",
+                        Gender = "H",
+                        CIC = "IDMEX1797426068"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "FABIOLA BERENIC",
+                        LastNameFather = "JIMENEZ",
+                        LastNameMother = "ROCHA",
+                        Address = "C ZONA PONIENTE 452 COL CENTRO DE SAN NICOLAS 666400 SAN NICOLAS DE LOS GARZA, N.L.",
+                        ElectroKey = "JMRCFB98093019M100",
+                        CURP = "JIRF980930MNLMCB00",
+                        BirthDate = "30-09-1998",
+                        YearRegistration = "2017",
+                        StateProvinceId = 1,
+                        CityId = 45,
+                        Section = "0047",
+                        Localization = "1",
+                        Issue = "2017",
+                        Validity = "2027",
+                        Gender = "M",
+                        CIC = "IDMEX1646791927"
+                    });
+                    defaultCitizens.Add(new Citizen()
+                    {
+                        Name = "ALBA JATSIRI",
+                        LastNameFather = "GONZALEZ",
+                        LastNameMother = "ARIAS",
+                        Address = "CALLE 18 649 RDCIAL LAS PUENTES 2SEC 66460 SAN NICOLAS DE LOS GARZA, N.L.",
+                        ElectroKey = "GNARAL97032719M700",
+                        CURP = "GOAA970327MNLNRL01",
+                        BirthDate = "20-03-1997",
+                        YearRegistration = "2014",
+                        StateProvinceId = 1,
+                        CityId = 45,
+                        Section = "1875",
+                        Localization = "1",
+                        Issue = "2014",
+                        Validity = "2024",
+                        Gender = "M",
+                        CIC = "IDMEX1244951288"
+                    });
+                    #endregion
 
                     context.CountryRegions.AddRange(defaultCountriesRegion);
                     context.SaveChanges();
-
 
                     context.StateProvinces.AddRange(defaultStatesProvince);
                     context.SaveChanges();

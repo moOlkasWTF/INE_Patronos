@@ -13,7 +13,7 @@ namespace WebApp.Models
 
         [ScaffoldColumn(false)]
         [Required(ErrorMessage = "The field Name is required")]
-        [StringLength(30, ErrorMessage = "The field Name must have max length of 30 characters")]
+        [StringLength(50, ErrorMessage = "The field Name must have max length of 30 characters")]
         [DataType(DataType.Text, ErrorMessage = "The field Name must be a string")]
         public String Name { get; set; }
 

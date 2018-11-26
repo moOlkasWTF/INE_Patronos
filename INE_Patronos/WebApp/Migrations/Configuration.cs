@@ -28,6 +28,8 @@ namespace WebApp.Migrations
                     List<StateProvince> defaultStatesProvince = new List<StateProvince>();
                     List<City> defaultCities = new List<City>();
                     List<Citizen> defaultCitizens = new List<Citizen>();
+                    List<PoliticalParty> politicalParties = new List<PoliticalParty>();
+
                     #region PAIS
                     defaultCountriesRegion.Add(new CountryRegion()
                     {
@@ -258,7 +260,6 @@ namespace WebApp.Migrations
                     defaultCities.Add(new City() { StateProvinceId = 2, CountryRegionId = 1, CveEnt = "14", CveCity = "124", Description = "ZAPOTLANEJO", CveCab = "1", NameCab = "ZAPOTLANEJO", PTOT = "63636", PMAS = "31114", PFEM = "32522", VTOT = "15642" });
                     defaultCities.Add(new City() { StateProvinceId = 2, CountryRegionId = 1, CveEnt = "14", CveCity = "125", Description = "SAN IGNACIO CERRO RDO", CveCab = "1", NameCab = "SAN IGNACIO CERRO RDO", PTOT = "17626", PMAS = "8501", PFEM = "9125", VTOT = "4171" });
                     #endregion
-
 
                     #region Credenciales
 
@@ -644,9 +645,76 @@ namespace WebApp.Migrations
                         CIC = "IDMEX1244951288"
                     });
                     #endregion
+
+                    #region Partidos Politicos
+                    politicalParties.Add(new PoliticalParty()
+                    {
+                        Name = "Partido Revolucionario Institucional",
+                        Description = "PRI",
+                        Foundation = "4 de marzo de 1929",
+                    });
+                    politicalParties.Add(new PoliticalParty()
+                    {
+                        Name = "Partido Accion Nacional",
+                        Description = "PAN",
+                        Foundation = "16 de septiembre de 1939",
+                    });
+                    politicalParties.Add(new PoliticalParty()
+                    {
+                        Name = "Movimiento Ciudadano",
+                        Description = "MC",
+                        Foundation = "1 de agosto de 1998",
+                    });
+                    politicalParties.Add(new PoliticalParty()
+                    {
+                        Name = "Nueva Alianza",
+                        Description = "NA",
+                        Foundation = "30 de enero de 2005",
+                    });
+                    politicalParties.Add(new PoliticalParty()
+                    {
+                        Name = "Partido Revolución Democrática",
+                        Description = "PRD",
+                        Foundation = "5 de mayo de 1989",
+                    });
+                    politicalParties.Add(new PoliticalParty()
+                    {
+                        Name = "Partido del trabajo",
+                        Description = "PT",
+                        Foundation = "8 de diciembre de 1990",
+                    });
+                    politicalParties.Add(new PoliticalParty()
+                    {
+                        Name = "Partido Verde Ecologista",
+                        Description = "Partido Verde",
+                        Foundation = "1986",
+                    });
+                    politicalParties.Add(new PoliticalParty()
+                    {
+                        Name = "Morena",
+                        Description = "La esperanza de México",
+                        Foundation = "2014 fundada por Andrés Manuel López Obrador",
+                    });
+                    #endregion
+
+                    #region Candidatos
+
+                    #endregion
+
+                    #region Voto Presidente
+
+                    #endregion
+
+                    #region Voto Gobernador
+
+                    #endregion
+
+                    #region Voto Alcalde
+
+                    #endregion
+
                     context.CountryRegions.AddRange(defaultCountriesRegion);
                     context.SaveChanges();
-
 
                     context.StateProvinces.AddRange(defaultStatesProvince);
                     context.SaveChanges();
@@ -655,6 +723,9 @@ namespace WebApp.Migrations
                     context.SaveChanges();
 
                     context.Citizens.AddRange(defaultCitizens);
+                    context.SaveChanges();
+
+                    context.PoliticalPartys.AddRange(politicalParties);
                     context.SaveChanges();
 
                     dbTran.Commit();
