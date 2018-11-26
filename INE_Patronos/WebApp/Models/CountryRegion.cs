@@ -92,8 +92,8 @@ namespace WebApp.Models
         [DataType(DataType.Text, ErrorMessage = "The field Comment must be a string")]
         public String Comment { get; set; }
 
-        public virtual ICollection<StateProvince> StatesProvince { get; set; }
-        public virtual ICollection<City> Cities { get; set; } 
+        public virtual ICollection<StateProvince> StatesProvinces { get; set; }
+        public virtual ICollection<City> Citys { get; set; } 
         
 
     }
