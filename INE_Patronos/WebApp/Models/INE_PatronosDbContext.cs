@@ -21,9 +21,7 @@ namespace WebApp.Models
         public DbSet<StateProvince> StateProvinces { get; set; }
         public DbSet<Citizen> Citizens { get; set; }
         public DbSet<Candidate> Candidates { get; set; }
-        public DbSet<Roles> Roless { get; set; }
         public DbSet<PoliticalParty> PoliticalPartys { get; set; }
-        public DbSet<Vote> Votes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -22,6 +22,8 @@ namespace WebApp.Models
                     List<StateProvince> defaultStatesProvince = new List<StateProvince>();
                     List<City> defaultCities = new List<City>();
                     List<Citizen> defaultCitizens = new List<Citizen>();
+                    List<PoliticalParty> politicalParties = new List<PoliticalParty>();
+
                     #region PAIS
                     defaultCountriesRegion.Add(new CountryRegion()
                     {
@@ -638,6 +640,73 @@ namespace WebApp.Models
                     });
                     #endregion
 
+                    #region Partidos Politicos
+                    politicalParties.Add(new PoliticalParty()
+                    {
+                        Name = "Partido Revolucionario Institucional",
+                        Description = "PRI",
+                        Foundation = "4 de marzo de 1929",
+                    });
+                    politicalParties.Add(new PoliticalParty()
+                    {
+                        Name = "Partido Accion Nacional",
+                        Description = "PAN",
+                        Foundation = "16 de septiembre de 1939",
+                    });
+                    politicalParties.Add(new PoliticalParty()
+                    {
+                        Name = "Movimiento Ciudadano",
+                        Description = "MC",
+                        Foundation = "1 de agosto de 1998",
+                    });
+                    politicalParties.Add(new PoliticalParty()
+                    {
+                        Name = "Nueva Alianza",
+                        Description = "NA",
+                        Foundation = "30 de enero de 2005",
+                    });
+                    politicalParties.Add(new PoliticalParty()
+                    {
+                        Name = "Partido Revolución Democrática",
+                        Description = "PRD",
+                        Foundation = "5 de mayo de 1989",
+                    });
+                    politicalParties.Add(new PoliticalParty()
+                    {
+                        Name = "Partido del trabajo",
+                        Description = "PT",
+                        Foundation = "8 de diciembre de 1990",
+                    });
+                    politicalParties.Add(new PoliticalParty()
+                    {
+                        Name = "Partido Verde Ecologista",
+                        Description = "Partido Verde",
+                        Foundation = "1986",
+                    });
+                    politicalParties.Add(new PoliticalParty()
+                    {
+                        Name = "Morena",
+                        Description = "La esperanza de México",
+                        Foundation = "2014 fundada por Andrés Manuel López Obrador",
+                    });
+                    #endregion
+
+                    #region Candidatos
+
+                    #endregion
+
+                    #region Voto Presidente
+
+                    #endregion
+
+                    #region Voto Gobernador
+
+                    #endregion
+
+                    #region Voto Alcalde
+
+                    #endregion
+
                     context.CountryRegions.AddRange(defaultCountriesRegion);
                     context.SaveChanges();
 
@@ -648,6 +717,9 @@ namespace WebApp.Models
                     context.SaveChanges();
 
                     context.Citizens.AddRange(defaultCitizens);
+                    context.SaveChanges();
+
+                    context.PoliticalPartys.AddRange(politicalParties);
                     context.SaveChanges();
 
                     dbTran.Commit();
