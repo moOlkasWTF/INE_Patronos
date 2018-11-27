@@ -12,10 +12,17 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    
-                </button>
-               
+
+                <nav class="navbar-brand">
+
+
+                    <img src="~/Imagenes/Patronospng.png" width="30" height="30" class="d-inline-block align-top" alt="">
+
+                </nav>
+                @Html.ActionLink("PATRONOS", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink(" POLITICAS DE USO", "Politicas", "Politicas", new { area = "" }, new { @class = "navbar-brand" })
+                
+            
             </div>
         </div>
     </div>
