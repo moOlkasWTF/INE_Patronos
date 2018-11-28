@@ -5,14 +5,33 @@
 
 <img src="~/Imagenes/Ine Logo.png"><img align="Right" src="~/Imagenes/CEE Logo.png">
 
+                               <center>
+                                       <h3>
+                                           <strong>
+                                               ¿Aún no haz votado?<br />
+                                                                  <button  type="button" onclick="location.href='@Url.Action("Login","Login")'" class="btn btn-success">¡VOTA YA!</button>
+                                           </strong>
+                                       </h3>
+                                   <br />
+                                   <br />
 
-<center>
-    <font size=12>
-        <strong>
-            Resultados Electorales
-        </strong>
-    </font>
-</center>
+
+                                       <center>
+                                           <font size=12>
+                                               <strong>
+                                                   Resultados Electorales
+                                               </strong>
+                                           </font>
+                                       </center>
+
+
+
+
+
+
+                               
+
+
 
 <script src="https://code.highcharts.com/highcharts.js"></script>
 
@@ -27,25 +46,25 @@
 
 
 @(Html.Highsoft().GetHighcharts(
-                                    new Highcharts
-                                    {
-                                        Title = new Title
+                                        new Highcharts
                                         {
-                                            Text = "Resultados de los partidos votados"
-                                        },
-                                        Subtitle = new Subtitle
-                                        {
-                                            Text = "Grafica que muestra el partido con mas votos a su favor de manera global."
-                                        },
-                                        XAxis = new List<XAxis>
-                                        {
+                                            Title = new Title
+                                            {
+                                                Text = "Resultados de los partidos votados"
+                                            },
+                                            Subtitle = new Subtitle
+                                            {
+                                                Text = "Grafica que muestra el partido con mas votos a su favor de manera global."
+                                            },
+                                            XAxis = new List<XAxis>
+                                            {
 new XAxis
 {
 Type = XAxisType.Category
 }
-                                        },
-                                        YAxis = new List<YAxis>
-                                            {
+                                            },
+                                            YAxis = new List<YAxis>
+                                                {
 new YAxis
 {
 Title = new YAxisTitle
@@ -53,39 +72,39 @@ Title = new YAxisTitle
 Text = "Porcentaje total"
 }
 }
-                                            },
-                                        Legend = new Legend
-                                        {
-                                            Enabled = false
-                                        },
-                                        Tooltip = new Tooltip
-                                        {
-                                            HeaderFormat = "<span style='font-size:11px'>{series.name}</span><br>",
-                                            PointFormat = "<span style=\"color:{point.color}\">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br />"
-                                        },
-
-                                        PlotOptions = new PlotOptions
-                                        {
-                                            Series = new PlotOptionsSeries
+                                                },
+                                            Legend = new Legend
                                             {
-                                                DataLabels = new PlotOptionsSeriesDataLabels
+                                                Enabled = false
+                                            },
+                                            Tooltip = new Tooltip
+                                            {
+                                                HeaderFormat = "<span style='font-size:11px'>{series.name}</span><br>",
+                                                PointFormat = "<span style=\"color:{point.color}\">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br />"
+                                            },
+
+                                            PlotOptions = new PlotOptions
+                                            {
+                                                Series = new PlotOptionsSeries
                                                 {
-                                                    Enabled = true,
-                                                    Format = "{point.y:.1f}%"
+                                                    DataLabels = new PlotOptionsSeriesDataLabels
+                                                    {
+                                                        Enabled = true,
+                                                        Format = "{point.y:.1f}%"
+                                                    }
                                                 }
-                                            }
-                                        },
-                                        Series = new List<Series>
-                                                {
-    new ColumnSeries
-    {
-    Name = "Porcentaje",
-    ColorByPoint = true,
-    Data = @ViewData["Grafica_partido"] as List<ColumnSeriesData>
-        }
-                                                    },
-                                    }
-                                                    , "chart1")
+                                            },
+                                            Series = new List<Series>
+                                                    {
+new ColumnSeries
+{
+Name = "Porcentaje",
+ColorByPoint = true,
+Data = @ViewData["Grafica_partido"] as List<ColumnSeriesData>
+}
+                                                        },
+                                        }
+                                                        , "chart1")
 )
 
 <br />
@@ -94,49 +113,49 @@ Text = "Porcentaje total"
 <div class="jumbotron">
 
     @(Html.Highsoft().GetHighcharts(
-                                                                                                        new Highcharts
-                                                                                                        {
-                                                                                                            Chart = new Highsoft.Web.Mvc.Charts.Chart
-                                                                                                            {
-                                                                                                                PlotBackgroundColor = null,
-                                                                                                                PlotBorderWidth = null,
-                                                                                                                PlotShadow = new Shadow
+                                                                                                                new Highcharts
                                                                                                                 {
-                                                                                                                    Enabled = false
-                                                                                                                }
-                                                                                                            },
-                                                                                                            Title = new Title
-                                                                                                            {
-                                                                                                                Text = "Resultados Presidenciales"
-                                                                                                            },
-                                                                                                            Tooltip = new Tooltip
-                                                                                                            {
-                                                                                                                PointFormat = "{series.name}: <b>{point.percentage:.1f}%</b>"
-                                                                                                            },
-                                                                                                            PlotOptions = new PlotOptions
-                                                                                                            {
-                                                                                                                Pie = new PlotOptionsPie
-                                                                                                                {
-                                                                                                                    AllowPointSelect = true,
-                                                                                                                    Cursor = PlotOptionsPieCursor.Pointer,
-                                                                                                                    DataLabels = new PlotOptionsPieDataLabels
+                                                                                                                    Chart = new Highsoft.Web.Mvc.Charts.Chart
                                                                                                                     {
-                                                                                                                        Enabled = true,
-                                                                                                                        Format = "<b>{point.name}</b>: {point.percentage:.1f} %"
-                                                                                                                    }
-                                                                                                                }
-                                                                                                            },
-                                                                                                            Series = new List<Series>
-                                                        {
-    new PieSeries
-    {
-    Name = "Porcentaje",
-    Data = @ViewData["Grafica_presidente"] as List<PieSeriesData>
-        },
+                                                                                                                        PlotBackgroundColor = null,
+                                                                                                                        PlotBorderWidth = null,
+                                                                                                                        PlotShadow = new Shadow
+                                                                                                                        {
+                                                                                                                            Enabled = false
+                                                                                                                        }
+                                                                                                                    },
+                                                                                                                    Title = new Title
+                                                                                                                    {
+                                                                                                                        Text = "Resultados Presidenciales"
+                                                                                                                    },
+                                                                                                                    Tooltip = new Tooltip
+                                                                                                                    {
+                                                                                                                        PointFormat = "{series.name}: <b>{point.percentage:.1f}%</b>"
+                                                                                                                    },
+                                                                                                                    PlotOptions = new PlotOptions
+                                                                                                                    {
+                                                                                                                        Pie = new PlotOptionsPie
+                                                                                                                        {
+                                                                                                                            AllowPointSelect = true,
+                                                                                                                            Cursor = PlotOptionsPieCursor.Pointer,
+                                                                                                                            DataLabels = new PlotOptionsPieDataLabels
+                                                                                                                            {
+                                                                                                                                Enabled = true,
+                                                                                                                                Format = "<b>{point.name}</b>: {point.percentage:.1f} %"
+                                                                                                                            }
+                                                                                                                        }
+                                                                                                                    },
+                                                                                                                    Series = new List<Series>
+                                                                {
+new PieSeries
+{
+Name = "Porcentaje",
+Data = @ViewData["Grafica_presidente"] as List<PieSeriesData>
+    },
 
-                                                            }
-                                                                                                        }
-                                                            , "chart0")
+                                                                    }
+                                                                                                                }
+                                                                    , "chart0")
     )
 
     <br />
@@ -150,124 +169,124 @@ Text = "Porcentaje total"
             <tr>
                 <td>
                     @(Html.Highsoft().GetHighcharts(
-                                                                                                new Highcharts
-                                                                                                {
-                                                                                                    Chart = new Highsoft.Web.Mvc.Charts.Chart
-                                                                                                    {
-                                                                                                        PlotBackgroundColor = null,
-                                                                                                        PlotBorderWidth = 0,
-                                                                                                        PlotShadow = new Shadow
+                                                                                                        new Highcharts
                                                                                                         {
-                                                                                                            Enabled = false
-                                                                                                        }
-                                                                                                    },
-                                                                                                    Title = new Title
-                                                                                                    {
-                                                                                                        Text = "Candidatos<br> Estatales",
-                                                                                                        Align = TitleAlign.Center,
-                                                                                                        VerticalAlign = TitleVerticalAlign.Middle,
-                                                                                                        Y = 40
-                                                                                                    },
-                                                                                                    Tooltip = new Tooltip
-                                                                                                    {
-                                                                                                        PointFormat = "{series.name}: <b>{point.percentage:.1f}%</b>"
-                                                                                                    },
-                                                                                                    PlotOptions = new PlotOptions
-                                                                                                    {
-                                                                                                        Pie = new PlotOptionsPie
-                                                                                                        {
-                                                                                                            DataLabels = new PlotOptionsPieDataLabels
+                                                                                                            Chart = new Highsoft.Web.Mvc.Charts.Chart
                                                                                                             {
-                                                                                                                Enabled = true,
-                                                                                                                Distance = -50,
-                                                                                                                Color = "#FFFFFF",
-                                                                                                                Shadow = new Shadow()
+                                                                                                                PlotBackgroundColor = null,
+                                                                                                                PlotBorderWidth = 0,
+                                                                                                                PlotShadow = new Shadow
                                                                                                                 {
-                                                                                                                    Enabled = true,
-                                                                                                                    Width = 10,
-                                                                                                                    Color = "#000000",
-                                                                                                                    OffsetX = 0,
-                                                                                                                    OffsetY = 0
-                                                                                                                },
+                                                                                                                    Enabled = false
+                                                                                                                }
                                                                                                             },
-                                                                                                            StartAngle = -90,
-                                                                                                            EndAngle = 90,
-                                                                                                            Center = new string[] { "50%", "75%" }
-                                                                                                        }
-                                                                                                    },
-                                                                                                    Series = new List<Series>
-                                                                                                    {
-                                                                                                                                        new PieSeries
-                                                                                                                                        {
-                                                                                                                                        Name = "Porcentaje",
-                                                                                                                                        InnerSize = "50%",
-                                                                                                                                        Data = @ViewData["Grafica_gobernador"] as List<PieSeriesData>
-                                                                                                                                            },
+                                                                                                            Title = new Title
+                                                                                                            {
+                                                                                                                Text = "Candidatos<br> Estatales",
+                                                                                                                Align = TitleAlign.Center,
+                                                                                                                VerticalAlign = TitleVerticalAlign.Middle,
+                                                                                                                Y = 40
+                                                                                                            },
+                                                                                                            Tooltip = new Tooltip
+                                                                                                            {
+                                                                                                                PointFormat = "{series.name}: <b>{point.percentage:.1f}%</b>"
+                                                                                                            },
+                                                                                                            PlotOptions = new PlotOptions
+                                                                                                            {
+                                                                                                                Pie = new PlotOptionsPie
+                                                                                                                {
+                                                                                                                    DataLabels = new PlotOptionsPieDataLabels
+                                                                                                                    {
+                                                                                                                        Enabled = true,
+                                                                                                                        Distance = -50,
+                                                                                                                        Color = "#FFFFFF",
+                                                                                                                        Shadow = new Shadow()
+                                                                                                                        {
+                                                                                                                            Enabled = true,
+                                                                                                                            Width = 10,
+                                                                                                                            Color = "#000000",
+                                                                                                                            OffsetX = 0,
+                                                                                                                            OffsetY = 0
+                                                                                                                        },
+                                                                                                                    },
+                                                                                                                    StartAngle = -90,
+                                                                                                                    EndAngle = 90,
+                                                                                                                    Center = new string[] { "50%", "75%" }
+                                                                                                                }
+                                                                                                            },
+                                                                                                            Series = new List<Series>
+                                                                                                            {
+                                                                                                                                                    new PieSeries
+                                                                                                                                                    {
+                                                                                                                                                    Name = "Porcentaje",
+                                                                                                                                                    InnerSize = "50%",
+                                                                                                                                                    Data = @ViewData["Grafica_gobernador"] as List<PieSeriesData>
+                                                                                                                                                        },
 
+                                                                                                                }
                                                                                                         }
-                                                                                                }
-                                                                                                        , "chart2")
+                                                                                                                , "chart2")
                     )
                 </td>
                 <td>
                     @(Html.Highsoft().GetHighcharts(
-                                                                                                new Highcharts
-                                                                                                {
-                                                                                                    Chart = new Highsoft.Web.Mvc.Charts.Chart
-                                                                                                    {
-                                                                                                        PlotBackgroundColor = null,
-                                                                                                        PlotBorderWidth = 0,
-                                                                                                        PlotShadow = new Shadow
+                                                                                                        new Highcharts
                                                                                                         {
-                                                                                                            Enabled = false
-                                                                                                        }
-                                                                                                    },
-                                                                                                    Title = new Title
-                                                                                                    {
-                                                                                                        Text = "Candidatos<br> Municipales",
-                                                                                                        Align = TitleAlign.Center,
-                                                                                                        VerticalAlign = TitleVerticalAlign.Middle,
-                                                                                                        Y = 40
-                                                                                                    },
-                                                                                                    Tooltip = new Tooltip
-                                                                                                    {
-                                                                                                        PointFormat = "{series.name}: <b>{point.percentage:.1f}%</b>"
-                                                                                                    },
-                                                                                                    PlotOptions = new PlotOptions
-                                                                                                    {
-                                                                                                        Pie = new PlotOptionsPie
-                                                                                                        {
-                                                                                                            DataLabels = new PlotOptionsPieDataLabels
+                                                                                                            Chart = new Highsoft.Web.Mvc.Charts.Chart
                                                                                                             {
-                                                                                                                Enabled = true,
-                                                                                                                Distance = -50,
-                                                                                                                Color = "#FFFFFF",
-                                                                                                                Shadow = new Shadow()
+                                                                                                                PlotBackgroundColor = null,
+                                                                                                                PlotBorderWidth = 0,
+                                                                                                                PlotShadow = new Shadow
                                                                                                                 {
-                                                                                                                    Enabled = true,
-                                                                                                                    Width = 10,
-                                                                                                                    Color = "#000000",
-                                                                                                                    OffsetX = 0,
-                                                                                                                    OffsetY = 0
-                                                                                                                },
+                                                                                                                    Enabled = false
+                                                                                                                }
                                                                                                             },
-                                                                                                            StartAngle = -90,
-                                                                                                            EndAngle = 90,
-                                                                                                            Center = new string[] { "50%", "75%" }
-                                                                                                        }
-                                                                                                    },
-                                                                                                    Series = new List<Series>
-                                                                                                    {
-                                                                                                                                        new PieSeries
-                                                                                                                                        {
-                                                                                                                                        Name = "Porcentaje",
-                                                                                                                                        InnerSize = "50%",
-                                                                                                                                        Data = @ViewData["Grafica_alcalde"] as List<PieSeriesData>
-                                                                                                                                            },
+                                                                                                            Title = new Title
+                                                                                                            {
+                                                                                                                Text = "Candidatos<br> Municipales",
+                                                                                                                Align = TitleAlign.Center,
+                                                                                                                VerticalAlign = TitleVerticalAlign.Middle,
+                                                                                                                Y = 40
+                                                                                                            },
+                                                                                                            Tooltip = new Tooltip
+                                                                                                            {
+                                                                                                                PointFormat = "{series.name}: <b>{point.percentage:.1f}%</b>"
+                                                                                                            },
+                                                                                                            PlotOptions = new PlotOptions
+                                                                                                            {
+                                                                                                                Pie = new PlotOptionsPie
+                                                                                                                {
+                                                                                                                    DataLabels = new PlotOptionsPieDataLabels
+                                                                                                                    {
+                                                                                                                        Enabled = true,
+                                                                                                                        Distance = -50,
+                                                                                                                        Color = "#FFFFFF",
+                                                                                                                        Shadow = new Shadow()
+                                                                                                                        {
+                                                                                                                            Enabled = true,
+                                                                                                                            Width = 10,
+                                                                                                                            Color = "#000000",
+                                                                                                                            OffsetX = 0,
+                                                                                                                            OffsetY = 0
+                                                                                                                        },
+                                                                                                                    },
+                                                                                                                    StartAngle = -90,
+                                                                                                                    EndAngle = 90,
+                                                                                                                    Center = new string[] { "50%", "75%" }
+                                                                                                                }
+                                                                                                            },
+                                                                                                            Series = new List<Series>
+                                                                                                            {
+                                                                                                                                                    new PieSeries
+                                                                                                                                                    {
+                                                                                                                                                    Name = "Porcentaje",
+                                                                                                                                                    InnerSize = "50%",
+                                                                                                                                                    Data = @ViewData["Grafica_alcalde"] as List<PieSeriesData>
+                                                                                                                                                        },
 
+                                                                                                                }
                                                                                                         }
-                                                                                                }
-                                                                                                        , "chart3")
+                                                                                                                , "chart3")
                     )
                 </td>
             </tr>
@@ -276,25 +295,25 @@ Text = "Porcentaje total"
 </div>
 
 @(Html.Highsoft().GetHighcharts(
-                                    new Highcharts
-                                    {
-                                        Title = new Title
+                                        new Highcharts
                                         {
-                                            Text = "Resultados de los votos totales"
-                                        },
-                                        Subtitle = new Subtitle
-                                        {
-                                            Text = "Grafica que muestra total de personas que han votado y su contraparte."
-                                        },
-                                        XAxis = new List<XAxis>
-                                        {
+                                            Title = new Title
+                                            {
+                                                Text = "Resultados de los votos totales"
+                                            },
+                                            Subtitle = new Subtitle
+                                            {
+                                                Text = "Grafica que muestra total de personas que han votado y su contraparte."
+                                            },
+                                            XAxis = new List<XAxis>
+                                            {
 new XAxis
 {
 Type = XAxisType.Category
 }
-                                        },
-                                        YAxis = new List<YAxis>
-                                            {
+                                            },
+                                            YAxis = new List<YAxis>
+                                                {
 new YAxis
 {
 Title = new YAxisTitle
@@ -302,37 +321,37 @@ Title = new YAxisTitle
 Text = "Porcentaje total"
 }
 }
-                                            },
-                                        Legend = new Legend
-                                        {
-                                            Enabled = false
-                                        },
-                                        Tooltip = new Tooltip
-                                        {
-                                            HeaderFormat = "<span style='font-size:11px'>{series.name}</span><br>",
-                                            PointFormat = "<span style=\"color:{point.color}\">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br />"
-                                        },
-
-                                        PlotOptions = new PlotOptions
-                                        {
-                                            Series = new PlotOptionsSeries
+                                                },
+                                            Legend = new Legend
                                             {
-                                                DataLabels = new PlotOptionsSeriesDataLabels
+                                                Enabled = false
+                                            },
+                                            Tooltip = new Tooltip
+                                            {
+                                                HeaderFormat = "<span style='font-size:11px'>{series.name}</span><br>",
+                                                PointFormat = "<span style=\"color:{point.color}\">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br />"
+                                            },
+
+                                            PlotOptions = new PlotOptions
+                                            {
+                                                Series = new PlotOptionsSeries
                                                 {
-                                                    Enabled = true,
-                                                    Format = "{point.y:.1f}%"
+                                                    DataLabels = new PlotOptionsSeriesDataLabels
+                                                    {
+                                                        Enabled = true,
+                                                        Format = "{point.y:.1f}%"
+                                                    }
                                                 }
-                                            }
-                                        },
-                                        Series = new List<Series>
-                                                {
-    new ColumnSeries
-    {
-    Name = "Porcentaje",
-    ColorByPoint = true,
-    Data = @ViewData["Grafica_votaciones"] as List<ColumnSeriesData>
-        }
-                                                    },
-                                    }
-                                                    , "chart5")
+                                            },
+                                            Series = new List<Series>
+                                                    {
+new ColumnSeries
+{
+Name = "Porcentaje",
+ColorByPoint = true,
+Data = @ViewData["Grafica_votaciones"] as List<ColumnSeriesData>
+}
+                                                        },
+                                        }
+                                                        , "chart5")
 )
