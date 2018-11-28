@@ -23,6 +23,7 @@ namespace WebApp.Models
                     List<City> defaultCities = new List<City>();
                     List<Citizen> defaultCitizens = new List<Citizen>();
                     List<PoliticalParty> politicalParties = new List<PoliticalParty>();
+                    List<Candidate> candidates = new List<Candidate>();
 
                     #region PAIS
                     defaultCountriesRegion.Add(new CountryRegion()
@@ -692,7 +693,74 @@ namespace WebApp.Models
                     #endregion
 
                     #region Candidatos
+                    //PRESIDENTES//
+                    candidates.Add(new Candidate()
+                    {
+                        PoliticalPartyId = 1,
+                        Rol = "PRESIDENTE",
+                        Name = "JOSE ANTONIO",
+                        LastName = "MEADE KURIBEÑA",
+                        Age = "49 AÑOS"
+                    });
+                    candidates.Add(new Candidate()
+                    {
+                        PoliticalPartyId = 2,
+                        Rol = "PRESIDENTE",
+                        Name = "RICARDO",
+                        LastName = "ANAYA CORTES",
+                        Age = "39 AÑOS"
+                    });
+                    candidates.Add(new Candidate()
+                    {
+                        PoliticalPartyId = 3,
+                        Rol = "PRESIDENTE",
+                        Name = "ANDRES MANUEL",
+                        LastName = "LOPEZ OBRADOR",
+                        Age = "64 AÑOS"
+                    });
 
+                    //GOBERNADORES DE NUEVO LEON//
+                    candidates.Add(new Candidate()
+                    {
+                        PoliticalPartyId = 1,
+                        Rol = "GOBERNADOR",
+                        Name = "IVONNE",
+                        LastName = "ALVAREZ GARCIA"
+                        Age = "47 AÑOS"
+                    });
+                    candidates.Add(new Candidate()
+                    {
+                        PoliticalPartyId = 2,
+                        Rol = "GOBERNADOR",
+                        Name = "FELIPE DE JESUS",
+                        LastName = "CANTU FLORES",
+                        Age = "39 AÑOS"
+                    });
+                    candidates.Add(new Candidate()
+                    {
+                        PoliticalPartyId = 5,
+                        Rol = "GOBERNADOR",
+                        Name = "HUMBERTO",
+                        LastName = "GONZALEZ SESMA"
+                    });
+                    
+                    //GOBERNADORES DE JALISCO//
+                    candidates.Add(new Candidate()
+                    {
+                        PoliticalPartyId = 1,
+                        Rol = "GOBERNADOR",
+                        Name = "JORGE ARISTOTELES",
+                        LastName = "SANDOVAL DIAZ",
+                        Age = "56 AÑOS"
+                    });
+                    candidates.Add(new Candidate()
+                    {
+                        PoliticalPartyId = 2,
+                        Rol = "GOBERNADOR",
+                        Name = "FERNANDO GUZMAN",
+                        LastName = "PEREZ PELAEZ",
+                        Age = "43 AÑOS"
+                    });
                     #endregion
 
                     #region Voto Presidente
@@ -720,6 +788,9 @@ namespace WebApp.Models
                     context.SaveChanges();
 
                     context.PoliticalPartys.AddRange(politicalParties);
+                    context.SaveChanges();
+
+                    context.Candidates.AddRange(candidates);
                     context.SaveChanges();
 
                     dbTran.Commit();
