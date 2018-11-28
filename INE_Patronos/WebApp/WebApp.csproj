@@ -355,7 +355,9 @@
     <Content Include="Content\Site.css" />
     <Content Include="Imagenes\CEE Logo.png" />
     <Content Include="Imagenes\CIC.png" />
+    <Content Include="Imagenes\cicf.jpg" />
     <Content Include="Imagenes\CLave de Elector.png" />
+    <Content Include="Imagenes\clavedeelectorf.jpg" />
     <Content Include="Imagenes\Ine Logo.png" />
     <Content Include="Imagenes\Patronospng.png" />
     <Content Include="Images\Fotos\CUGJ980715MNLRNS02.jpeg" />
